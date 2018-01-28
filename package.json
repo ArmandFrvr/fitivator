@@ -1,0 +1,25 @@
+{
+  "name": "fitivator",
+  "version": "1.0.0",
+  "description": "Fitness app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArmandFrvr/fitivator.git"
+  },
+  "author": "Team_TBD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArmandFrvr/fitivator/issues"
+  },
+  "homepage": "https://github.com/ArmandFrvr/fitivator#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "sequelize": "^4.32.2"
+  }
+}
