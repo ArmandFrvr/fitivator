@@ -35,16 +35,17 @@ footer{
     background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
 }
 
-.card {
+.dark .card {
     background-color: rgba(126, 123, 215, 0.2);
 }
 
-.md-form .prefix {
+/*Removed global prefix styling... should be using form-sm on the surrounding div if you want smaller font & icons.*/
+/*.md-form .prefix {
     font-size: 1.5rem;
     margin-top: 1rem;
-}
+}*/
 
-.md-form label {
+.dark .md-form label {
     color: #ffffff;
 }
 
@@ -60,4 +61,30 @@ h6 {
         height: 1040px;
     }
 }
-            
+
+/*input[type=date]
+*/
+
+select {
+    display: inline !important; /* MDB disables select because they want you to pay for their version... */
+}
+
+.md-form.form-sm select {
+    padding-bottom: .2rem;
+    padding-top: .2rem;
+    font-size: .8rem;
+    line-height: .5;
+    margin-top: 10px;
+}
+
+.md-form.form-sm .prefix~select {
+    margin-left: 2.2rem;
+}
+
+.md-form .prefix~select {
+    width: calc(100% - 3rem);
+}
+
+input[type="time"] {
+    line-height: 1;
+}
