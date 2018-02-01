@@ -19,52 +19,64 @@
 
 
 
-<form>
+  <form>
 
-<input type="checkbox" id="call-want">
-<label for="call-want">I want reminder calls for my workouts!</label>
+  <input type="checkbox" id="call-want">
+  <label for="call-want">I want reminder calls for my workouts!</label>
 
-<div id="call-want-section">
+  <div id="call-want-section">
 
-  <label for="user-phone">Phone Number:</label><br>
-  <input type="tel" id="user-phone"><br>
-
-
-  <select aria-describedby="day">
-    <option value="sun">Sunday</option>
-    <option value="mon">Monday</option>
-    <option value="tues">Tuesday</option>
-    <option value="wed">Wednesday</option>
-    <option value="thurs">Thursday</option>
-    <option value="fri">Friday</option>
-    <option value="sat">Saturday</option>
-  </select>
-
-  <input type="time"><br>
-
-  <button id="add-workout">Add Workout</button>
+    <label for="user-phone">Phone Number:</label><br>
+    <input type="tel" id="user-phone"><br>
 
 
-</div>
+    <select aria-describedby="day">
+      <option value="sun">Sunday</option>
+      <option value="mon">Monday</option>
+      <option value="tues">Tuesday</option>
+      <option value="wed">Wednesday</option>
+      <option value="thurs">Thursday</option>
+      <option value="fri">Friday</option>
+      <option value="sat">Saturday</option>
+    </select>
+
+    <input type="time"><br>
+
+    <button id="add-workout">Add Workout</button>
 
 
-<input type="checkbox" id="call-make" aria-describedby="call-make-desc">
-<label for="call-make">I want to help motivate other people!</label>
-<p class="description" id="call-make-desc">Sign up to call someone else at their scheduled workout time.  If you call on time, they might reward you with FitCash!</p>
-
-<div id="call-make-section">
+  </div>
 
 
+  <input type="checkbox" id="call-make" aria-describedby="call-make-desc">
+  <label for="call-make">I want to help motivate other people!</label>
+  <p class="description" id="call-make-desc">Sign up to call someone else at their scheduled workout time.  If you call on time, they might reward you with FitCash!</p>
 
-
-
-
-</div>
+  <div id="call-make-section">
 
 
 
 
 
 
+  </div>
 
-</form>
+
+
+
+
+
+
+  </form>
+
+
+
+  <!-- SCRIPTS -->
+  <script type="text/javascript" src="../../js/compiled.min.js"></script>
+  <script>
+      new WOW().init();
+  </script>
+</body>
+
+
+</html>
