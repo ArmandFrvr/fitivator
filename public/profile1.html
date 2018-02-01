@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="css/mdb.min.css">
-
+    <link rel="stylesheet" href="css/style.css">
     <!-- Your custom styles (optional) -->
     <style>
 
@@ -30,7 +30,7 @@
             <!-- Logo -->
             <li class="logo-sn waves-effect">
                 <div class=" text-center">
-                    <a href="#" class="pl-0"><img src="images/fitivator-logo.svg" class=""></a>
+                    <a href="#" class="pl-0"><img src="images/fitivator-logo.svg" class="" alt="Fitivator"></a>
                 </div>
             </li>
             <!--/. Logo -->
@@ -107,8 +107,8 @@
                             </ul>
                         </div>
                     </li>
-                    
-                    
+
+
                     <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-check-square-o"></i> Forms<i class="fa fa-angle-down rotate-icon"></i></a>
                         <div class="collapsible-body">
                             <ul>
@@ -119,8 +119,8 @@
                             </ul>
                         </div>
                     </li>
-                    
-                
+
+
                     <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-map"></i> Maps<i class="fa fa-angle-down rotate-icon"></i></a>
                         <div class="collapsible-body">
                             <ul>
@@ -240,8 +240,83 @@
                             </div>
                             <!--/.Card Data-->
 
-                            <!--Card content-->
-                            <div class="card-body">
+                            <!--Profile Card content-->
+                            <div class="card-body text-left">
+
+                                <!-- Grid row -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="checkbox" class="filled-in" id="call-want">
+                                            <label for="call-want">I want reminder calls for my workouts!</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="call-want-section" class="col-md-11 offset-md-1">
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="md-form form-sm">
+                                            <i class="fa fa-phone prefix"></i>
+                                            <input type="tel" id="user-phone" class="form-control">
+                                            <label for="user-phone">Phone Number:</label>
+                                        </div>
+                                    </div>
+                                  </div>
+
+
+                                  <div class="row">
+                                    <div class="col-md-6 offset-md"><hr></div>
+                                    <div class="w-100"></div>
+                                    <div class="col-md-3 text-center">
+                                        <h6><strong><u>Workout Day</u></strong></h6>
+                                    </div>
+                                    <div class="col-md-3 text-center">
+                                        <h6><strong><u>Time</u></strong></h6>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="md-form form-sm">
+                                            <select class="form-control" aria-describedby="day">
+                                              <option value="sun">Sunday</option>
+                                              <option value="mon">Monday</option>
+                                              <option value="tues">Tuesday</option>
+                                              <option value="wed">Wednesday</option>
+                                              <option value="thurs">Thursday</option>
+                                              <option value="fri">Friday</option>
+                                              <option value="sat">Saturday</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="md-form form-sm">
+                                            <i class="fa fa-clock-o prefix"></i>
+                                            <input type="time" id="time-1" class="form-control">
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="md-form form-small">
+                                            <button id="add-workout" class="btn btn-default btn-block">Add Workout</button>
+                                        </div>
+                                    </div>
+                                  </div>
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
 
                                 <!-- Grid row -->
                                 <div class="row">
@@ -443,6 +518,7 @@
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="../../js/popper.min.js"></script>
