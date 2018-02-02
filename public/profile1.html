@@ -278,7 +278,7 @@
                                     </div>
                                   </div>
 
-                                  <div class="row" id="workout-days">
+                                  <div class="row workout-row">
                                     <div class="col-md-3">
                                         <div class="md-form form-sm">
                                             <select class="form-control" aria-labelledby="day">
@@ -298,9 +298,19 @@
                                             <input type="time" id="time-1" class="form-control">
                                         </div>
                                     </div>
+                                    <div class="col-md-1">
+                                        <div class="md-form form-sm">
+                                            <button class="remove-workout icon-btn" aria-label="Remove Workout">
+                                                <i class="fa fa-times-circle-o"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+
                                   </div>
 
-                                  <div class="row">
+                                  <div class="row" id="workout-btn-row">
                                     <div class="col-md-6">
                                         <div class="md-form form-small">
                                             <button id="add-workout" class="btn btn-default btn-block">Add Workout</button>
@@ -477,6 +487,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="./js/mdb.min.js"></script>
     <!--Custom scripts-->
+    <script type="text/javascript" src="./js/profile.js"></script>
     <script>
         // SideNav Initialization
         $(".button-collapse").sideNav();

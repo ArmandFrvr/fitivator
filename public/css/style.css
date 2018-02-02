@@ -89,3 +89,22 @@ select {
     line-height: 1;
     padding-left: 10px;
 }
+
+.workout-row .md-form {
+    margin-bottom: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.icon-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.6em;
+    padding-top: 6px;
+}
+
+.remove-workout {
+    color: #C00000;
+}
