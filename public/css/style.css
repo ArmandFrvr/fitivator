@@ -69,10 +69,10 @@ select {
     display: inline !important; /* MDB disables select because they want you to pay for their version... */
 }
 
-.md-form.form-sm select {
+#custom .md-form.form-sm select {
     padding-bottom: .2rem;
     padding-top: .2rem;
-    font-size: .8rem;
+    /*font-size: .8rem;*/
     line-height: .5;
     margin-top: 10px;
 }
@@ -85,6 +85,7 @@ select {
     width: calc(100% - 3rem);
 }
 
-input[type="time"] {
+#custom input[type="time"] {
     line-height: 1;
+    padding-left: 10px;
 }

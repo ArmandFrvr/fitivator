@@ -12,14 +12,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="css/mdb.min.css">
-    <link rel="stylesheet" href="css/style.css">
+
     <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
+
     <style>
 
     </style>
 </head>
 
-<body class="fixed-sn white-skin">
+<body class="fixed-sn white-skin" id="custom">
 
     <!--Main Navigation-->
     <header>
@@ -266,20 +268,20 @@
 
 
                                   <div class="row">
-                                    <div class="col-md-6 offset-md"><hr></div>
+                                    <!-- <div class="col-md-6 offset-md"><hr></div> -->
                                     <div class="w-100"></div>
                                     <div class="col-md-3 text-center">
-                                        <h6><strong><u>Workout Day</u></strong></h6>
+                                        <h6 id="day"><strong><u>Workout Day</u></strong></h6>
                                     </div>
                                     <div class="col-md-3 text-center">
-                                        <h6><strong><u>Time</u></strong></h6>
+                                        <h6 id="time"><strong><u>Time</u></strong></h6>
                                     </div>
                                   </div>
 
-                                  <div class="row">
+                                  <div class="row" id="workout-days">
                                     <div class="col-md-3">
                                         <div class="md-form form-sm">
-                                            <select class="form-control" aria-describedby="day">
+                                            <select class="form-control" aria-labelledby="day">
                                               <option value="sun">Sunday</option>
                                               <option value="mon">Monday</option>
                                               <option value="tues">Tuesday</option>
@@ -385,61 +387,9 @@
                                 </div>
                                 <!-- Grid row -->
 
-                                <!-- Grid row -->
-                                <div class="row">
 
-                                    <!-- Grid column -->
-                                    <div class="col-md-12">
 
-                                        <div class="md-form form-sm">
-                                            <input type="text" id="form6" class="form-control">
-                                            <label for="form6" class="">Address</label>
-                                        </div>
 
-                                    </div>
-                                    <!-- Grid column -->
-
-                                </div>
-                                <!-- Grid row -->
-
-                                <!-- Grid row -->
-                                <div class="row">
-
-                                    <!-- Grid column -->
-                                    <div class="col-lg-4 col-md-12">
-
-                                        <div class="md-form form-sm">
-                                            <input type="text" id="form7" class="form-control">
-                                            <label for="form7" class="">City</label>
-                                        </div>
-
-                                    </div>
-                                    <!-- Grid column -->
-
-                                    <!-- Grid column -->
-                                    <div class="col-lg-4 col-md-6">
-
-                                        <div class="md-form form-sm">
-                                            <input type="text" id="form8" class="form-control">
-                                            <label for="form8" class="">Country</label>
-                                        </div>
-
-                                    </div>
-                                    <!-- Grid column -->
-
-                                    <!-- Grid column -->
-                                    <div class="col-lg-4 col-md-6">
-
-                                        <div class="md-form form-sm">
-                                            <input type="text" id="form9" class="form-control">
-                                            <label for="form9" class="">Postal Code</label>
-                                        </div>
-
-                                    </div>
-                                    <!-- Grid column -->
-
-                                </div>
-                                <!-- Grid row -->
 
                                 <!-- Grid row -->
                                 <div class="row">
@@ -519,13 +469,13 @@
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
-    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="../../js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="../../js/mdb.min.js"></script>
+    <script type="text/javascript" src="./js/mdb.min.js"></script>
     <!--Custom scripts-->
     <script>
         // SideNav Initialization
