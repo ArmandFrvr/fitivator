@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  // Button to add additional workout days
   $("#add-workout").on("click", function() {
 
     let workoutDiv = '<div class="row workout-row"><div class="col-md-3">'
@@ -23,8 +24,18 @@ $(document).ready(function() {
                       // Put data element on both day and time so we can use it in the on change
 
     $("#workout-btn-row").before(workoutDiv);
+  });
 
+// Checkbox to show/hide workout buddy section
+  $("#call-want").on("change", function() {
 
+    if($(this).prop("checked")) {
+      $("#call-want-section").slideDown(500);
+      $("#call-want-section").show();
+    }
+    else {
+      $("#call-want-section").hide();
+    }
   });
 
 
@@ -34,12 +45,14 @@ $(document).ready(function() {
 $(document).on("click", "#workout-days select, #workout-days input", function() {
 
   // Update the value of that workout day and time entry in the database
+  // CODE GOES HERE
 
 });
 
+// Remove workout button(s)
 $(document).on("click", ".remove-workout", function() {
   // Need to remove from the db before we remove from the dom since we'll need the data id
-
+  // CODE GOES HERE
 
   // Remove from DOM
   $(this).closest(".workout-row").remove();
