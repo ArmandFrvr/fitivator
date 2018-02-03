@@ -112,3 +112,8 @@ button.icon-btn {
 #call-want-section {
     display: none;
 }
+
+#user-icon {
+    padding: 10px;
+    margin-top: -20px;
+}
