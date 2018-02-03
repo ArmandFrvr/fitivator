@@ -1,4 +1,3 @@
-var moment = require("moment");
 
 // List of days so we can support multiple time zones
 var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
