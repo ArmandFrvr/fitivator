@@ -30,6 +30,8 @@
     "serve-static": "^1.13.1"
     "moment": "^2.20.1",
     "moment-timezone": "^0.5.14",
+    "mysql2": "^1.5.1",
+    "passport-amazon": "^1.0.0",
     "sequelize": "^4.32.2"
 
   }
