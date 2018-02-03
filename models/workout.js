@@ -14,14 +14,14 @@ module.exports = function(sequelize, DataTypes) {
 
     day: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,    // have to let these be null if we want them to update independently
       validate: {
         isIn: daysOfWeek
       }
     },
     time: {
-      type: DataTypes.DATE,
-      allowNull: false
+      type: DataTypes.DATE
+      // allowNull: false
     }
   });
 

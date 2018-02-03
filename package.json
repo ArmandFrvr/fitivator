@@ -20,6 +20,8 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14",
     "passport-amazon": "^1.0.0",
     "sequelize": "^4.32.2"
   }
