@@ -6,3 +6,33 @@
 
 // Workout model goes here
 
+var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+module.exports = function(sequelize, DataTypes) {
+  var Workout = sequelize.define("Workout", {
+
+
+    day: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isIn: daysOfWeek
+      }
+    },
+    time: {
+      type: DataTypes.DATE,
+      allowNull: false
+    }
+  });
+
+  // Workouts belong to users
+  Workout.associate = function(models) {
+    Workout.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
+  return Workout;
+};
