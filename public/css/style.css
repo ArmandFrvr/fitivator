@@ -108,3 +108,7 @@ button.icon-btn {
 .remove-workout {
     color: #C00000;
 }
+
+#call-want-section {
+    display: none;
+}

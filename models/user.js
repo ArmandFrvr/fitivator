@@ -15,8 +15,6 @@ module.exports = function(sequelize, DataTypes) {
 
     // Need to define other user fields here
 
-
-
     // User attributes for matchMaking-- what questions should we ask?
     // We save this in the db so users can be matched in the future
     //Maybe make this a separate table from users
@@ -25,9 +23,12 @@ module.exports = function(sequelize, DataTypes) {
 
   });
 
-// Users have:
-  // WorkoutSchedule
-    // Model that stores their workout schedule
+  // Users have 0 or more Workouts
+  User.associate = function(models) {
+    User.hasMany(models.Workout, {
+      onDelete: "cascade"   // delete their workouts if a user is deleted
+    });
+  };
 
   // MatchQuestions
     // Model that stores the questions users enter to match with other users
