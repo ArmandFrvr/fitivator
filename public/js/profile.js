@@ -43,6 +43,19 @@ $(document).ready(function() {
   });
 
 
+  // Checkbox to sign up to make calls
+  $("#call-want").on("change", function() {
+
+    if($(this).prop("checked")) {
+      $("#call-want-section").slideDown(500);
+      $("#call-want-section").show();
+    }
+    else {
+      $("#call-want-section").hide();
+    }
+  });
+
+
 });
 
 // When the value of a workout day changes

@@ -32,7 +32,7 @@
             <!-- Logo -->
             <li class="logo-sn waves-effect">
                 <div class=" text-center">
-                    <a href="#" class="pl-0"><img src="images/fitivator-logo-outlined.svg" class="" alt="Fitivator"></a>
+                    <a href="#" class="pl-0"><img id="sidebar-logo" src="images/fitivator-logo-outlined.svg" class="" alt="Fitivator"></a>
                 </div>
             </li>
             <!--/. Logo -->
@@ -49,25 +49,8 @@
             <!-- Side navigation links -->
             <li>
                 <ul class="collapsible collapsible-accordion">
-                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-tachometer"></i> Dashboards<i class="fa fa-angle-down rotate-icon"></i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="../dashboards/v-1.html" class="waves-effect">Version 1</a>
-                                </li>
-                                <li><a href="../dashboards/v-2.html" class="waves-effect">Version 2</a>
-                                </li>
-                                <li><a href="../dashboards/v-3.html" class="waves-effect">Version 3</a>
-                                </li>
-                                <li><a href="../dashboards/v-4.html" class="waves-effect">Version 4</a>
-                                </li>
-                                <li><a href="../dashboards/v-5.html" class="waves-effect">Version 5</a>
-                                </li>
-                                <li><a href="../dashboards/v-6.html" class="waves-effect">Version 6</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-photo"></i> Pages<i class="fa fa-angle-down rotate-icon"></i></a>
+
+<!--                     <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-photo"></i> Pages<i class="fa fa-angle-down rotate-icon"></i></a>
                         <div class="collapsible-body">
                             <ul>
                                 <li><a href="../pages/login.html" class="waves-effect">Login</a>
@@ -96,8 +79,9 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-user"></i> Profile<i class="fa fa-angle-down rotate-icon"></i></a>
+                    </li> -->
+
+<!--                     <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-user"></i> Profile<i class="fa fa-angle-down rotate-icon"></i></a>
                         <div class="collapsible-body">
                             <ul>
                                 <li><a href="../profile/basic-1.html" class="waves-effect">Basic 1</a>
@@ -108,49 +92,26 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li> -->
 
 
-                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-check-square-o"></i> Forms<i class="fa fa-angle-down rotate-icon"></i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="../forms/basic.html" class="waves-effect">Basic</a>
-                                </li>
-                                <li><a href="../forms/extended.html" class="waves-effect">Extended</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
 
-
-                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-map"></i> Maps<i class="fa fa-angle-down rotate-icon"></i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="../maps/google.html" class="waves-effect">Google Maps</a>
-                                </li>
-                                <li><a href="../maps/full.html" class="waves-effect">Full screen map</a>
-                                </li>
-                                <li><a href="../maps/vector.html" class="waves-effect">Vector world map</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
                     <!-- Simple link -->
-                    <li><a href="../alerts/alerts.html" class="collapsible-header waves-effect"><i class="fa fa-bell-o"></i> Alerts</a></li>
+                    <li><a href="../alerts/alerts.html" class="collapsible-header waves-effect"><i class="fa fa-tachometer"></i> Dashboard</a></li>
 
-                    <li><a href="../modals/modals.html" class="collapsible-header waves-effect"><i class="fa fa-bolt"></i> Modals</a></li>
+                    <li><a href="../alerts/alerts.html" class="collapsible-header waves-effect"><i class="fa fa-user"></i> Profile</a></li>
 
-                    <li><a href="../charts/charts.html" class="collapsible-header waves-effect"><i class="fa fa-pie-chart"></i> Charts</a></li>
+                    <li><a href="../alerts/alerts.html" class="collapsible-header waves-effect"><i class="fa fa-bell-o"></i> Notifications</a></li>
+
+                    <li><a href="../charts/charts.html" class="collapsible-header waves-effect"><i class="fa fa-pie-chart"></i> Statistics</a></li>
 
                     <li><a href="../calendar/calendar.html" class="collapsible-header waves-effect"><i class="fa fa-calendar-check-o"></i> Calendar</a></li>
-
-                    <li><a href="../sections/sections.html" class="collapsible-header waves-effect"><i class="fa fa-th-large"></i> Sections</a></li>
 
                 </ul>
             </li>
             <!--/. Side navigation links -->
             </ul>
-            <div class="sidenav-bg mask-strong"></div>
+            <div class="sidenav-bg mask-strong" id="sidenav-bg"></div>
         </div>
         <!--/. Sidebar navigation -->
 
@@ -245,6 +206,48 @@
                             <!--Profile Card content-->
                             <div class="card-body text-left">
 
+
+                                <!-- Grid row -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="md-form form-sm">
+                                            <input type="text" id="form5" class="form-control">
+                                            <label for="form5" class="">First name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="md-form form-sm">
+                                            <input type="text" id="form5" class="form-control">
+                                            <label for="form5" class="">Last name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grid row -->
+
+
+
+
+                                <!-- Grid row -->
+                                <div class="row">
+                                    <div class="col-md-6"">
+                                        <div class="md-form form-sm">
+                                            <input type="text" id="form12" class="form-control">
+                                            <label for="form12" class="">Username</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6"">
+                                        <div class="md-form form-sm">
+                                            <input type="text" id="form3" class="form-control">
+                                            <label for="form3" class="">Email address</label>
+                                        </div>
+                                    </div>
+                                 </div>
+                                <!-- Grid row -->
+
+
+<br>
+
                                 <!-- Grid row -->
                                 <div class="row">
                                     <div class="col-md-12">
@@ -323,82 +326,46 @@
                                 </div>
 
 
-
-
-
-
-
-
-
+        <!-- CALL MAKING SECTION -->
                                 <!-- Grid row -->
                                 <div class="row">
-
-                                    <!-- Grid column -->
-                                    <div class="col-lg-4">
-
-                                        <div class="md-form form-sm">
-                                            <input type="text" id="form12" class="form-control">
-                                            <label for="form12" class="">Username</label>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="checkbox" class="filled-in" id="call-make
+                                                aria-describedby="call-make-desc">
+                                            <label for="call-make">I want to help motivate other people!</label>
+                                            <p class="description" id="call-make-desc">Sign up to call someone else at their scheduled workout time.  If you call on time, they might reward you with FitCash!</p>
                                         </div>
 
                                     </div>
-                                    <!-- Grid column -->
+                                </div>
 
-                                    <!-- Grid column -->
-                                    <div class="col-lg-4">
-
-                                        <div class="md-form form-sm">
-                                            <input type="text" id="form3" class="form-control">
-                                            <label for="form3" class="">Email address</label>
-                                        </div>
-
+                                <div id="call-make-section" class="col-md-11 offset-md-1">
+                                  <div class="row">
+                                    <div class="col-md-7 offset-md-2 text-center">
+                                        <p>Thanks!  We'll let you know when you're matched with someone.</p>
                                     </div>
-                                    <!-- Grid column -->
+                                  </div>
+                                </div>
 
-                                    <!-- Grid column -->
-                                    <div class="col-lg-4">
 
+
+
+
+
+
+
+                                <br>
+                                <!-- Grid row -->
+                                <div class="row">
+                                    <!-- Grid column -->
+                                    <div class="col-md-6">
                                         <div class="md-form form-sm">
                                             <input type="text" id="form4" class="form-control" disabled>
-                                            <label for="form4" class="disabled">Company</label>
+                                            <label for="form4" class="disabled">Team</label>
                                         </div>
-
                                     </div>
-                                    <!-- Grid column -->
-
                                 </div>
-                                <!-- Grid row -->
-
-                                <!-- Grid row -->
-                                <div class="row">
-
-                                    <!-- Grid column -->
-                                    <div class="col-md-6">
-
-                                        <div class="md-form form-sm">
-                                            <input type="text" id="form5" class="form-control">
-                                            <label for="form5" class="">First name</label>
-                                        </div>
-
-                                    </div>
-                                    <!-- Grid column -->
-
-                                    <!-- Grid column -->
-                                    <div class="col-md-6">
-
-                                        <div class="md-form form-sm">
-                                            <input type="text" id="form5" class="form-control">
-                                            <label for="form5" class="">Last name</label>
-                                        </div>
-
-                                    </div>
-                                    <!-- Grid column -->
-
-                                </div>
-                                <!-- Grid row -->
-
-
-
 
 
                                 <!-- Grid row -->
@@ -408,11 +375,11 @@
                                     <div class="col-md-12 about-text">
 
                                         <h4 class="text-muted text-left my-4"><strong>About me</strong></h4>
-
+                                        <p class="description">Tell us a little about yourself, your workout goals, and what motivates you.  This text is visible to other users when searching for motivation partners.</p>
                                         <!--Basic textarea-->
                                         <div class="md-form">
                                             <textarea type="text" id="form10" class="md-textarea"></textarea>
-                                            <label for="form10">Basic textarea</label>
+                                            <label for="form10">I am awesome!</label>
                                         </div>
 
                                     </div>
