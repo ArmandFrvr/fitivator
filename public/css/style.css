@@ -109,11 +109,32 @@ button.icon-btn {
     color: #C00000;
 }
 
-#call-want-section {
+#call-want-section,
+#call-make-section {
     display: none;
 }
 
 #user-icon {
     padding: 10px;
     margin-top: -20px;
+}
+
+/* Sidebar colors */
+#sidenav-bg:after, .sidenav-bg:after {
+    background-color: rgba(66, 54, 99, .8   );
+}
+
+#slide-out,
+#slide-out li,
+#slide-out a,
+#slide-out i, {
+    color: white !important;        /* this isn't working for some reason */
+}
+
+#sidebar-logo {
+    width: 90%;
+}
+
+.description {
+    font-style: italic;
 }
