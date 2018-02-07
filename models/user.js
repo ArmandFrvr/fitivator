@@ -45,6 +45,10 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         isUrl: true
       }
+    },
+    externalID: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   });
 
