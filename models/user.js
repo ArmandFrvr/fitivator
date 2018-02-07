@@ -39,11 +39,6 @@ module.exports = function(sequelize, DataTypes) {
         this.setDataValue("matchQuestions", val.join(";"));
       }
     },
-    hasPartner: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      default: false
-    },
     imgURL: {
       type: DataTypes.STRING,
       allowNull: true,
