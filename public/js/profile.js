@@ -62,14 +62,14 @@ $(document).ready(function() {
 
 
   // Checkbox to sign up to make calls
-  $("#call-want").on("change", function() {
+  $("#call-make").on("change", function() {
 
     if($(this).prop("checked")) {
-      $("#call-want-section").slideDown(500);
-      $("#call-want-section").show();
+      $("#call-make-section").slideDown(500);
+      $("#call-make-section").show();
     }
     else {
-      $("#call-want-section").hide();
+      $("#call-make-section").hide();
     }
   });
 
