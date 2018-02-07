@@ -15,19 +15,19 @@ footer{
     background-size: cover;
 }
 
-.top-nav-collapse {
+/* .top-nav-collapse {
     background-color: #3f51b5 !important;
-}
+} */
 
-.navbar:not(.top-nav-collapse) {
+/* .navbar:not(.top-nav-collapse) {
     background: transparent !important;
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .navbar:not(.top-nav-collapse) {
         background: #3f51b5 !important;
     }
-}
+} */
 
 .hm-gradient .full-bg-img {
     background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
@@ -120,7 +120,7 @@ button.icon-btn {
 }
 
 /* Sidebar colors */
-#sidenav-bg:after, .sidenav-bg:after {
+/* #sidenav-bg:after, .sidenav-bg:after {
     background-color: rgba(66, 54, 99, .8   );
 }
 
@@ -129,7 +129,7 @@ button.icon-btn {
 #slide-out a,
 #slide-out i, {
     color: white !important;        /* this isn't working for some reason */
-}
+/* } */ */
 
 #sidebar-logo {
     width: 90%;
