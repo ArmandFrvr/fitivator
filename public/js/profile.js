@@ -2,6 +2,24 @@
 // List of days so we can support multiple time zones
 var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+var currentUser;
+var currentUserID;
+
+// If user isn't logged in, redirect them to the login screen.
+// CODE GOES HERE
+
+
+// Get the user's ID
+// CODE GOES HERE
+
+
+// Select all of the user's info from the db so we have it to hand
+// CODE GOES HERE
+// currentUser = selectOne * from users where user.externalID = currentUserID
+// currentUser should be a JSON object so we can reference the user fields.
+
+
+
 $(document).ready(function() {
 
   // Button to add additional workout days
@@ -56,10 +74,62 @@ $(document).ready(function() {
   });
 
 
+  // Button to find workout partner
+  $("#find-partner").on("click", function() {
+
+    // CODE GOES HERE TO FIND MATCH
+
+    // first check to see if they already have a partner
+    if(currentUser.matchedUser) {
+      // This isn't falsy, so they already have a match
+      // Let them know they're currently matched with user xyz
+      // Need to selectOne from users where user.id = currentUser.matchedUser
+      let theirMatch; // = CODE GOES HERE to select them
+
+      // for now
+      alert("You are already matched with " + theirMatch.Firstname);
+      // Make some nice UI here where they can choose someone else if their match sucks
+
+    }
+    else {
+      // They don't have a match, so find them one
+      let matchString = user.matchQuestions;
+
+      // let unmatchedUsers =
+      // Select all users from db who don't have a matched user
+      // select * from users where user.matchedUser is null
+
+      // for each user in the unmatchedUsers array, check how good of a match they are
+      // similar algorithm to friendFinder
+
+      // Array of objects in the format
+      // {
+      //    id
+      //    score
+      // }
+      var topThree = [];
+
+      // https://stackoverflow.com/questions/4956593/optimal-algorithm-for-returning-top-k-values-from-an-array-of-length-n
+      for(let i = 0; i < unmatchedUsers.length; i++) {
+
+
+
+
+      }
+
+      // bestUser should
+
+    }
+
+
+  })
+
+
 });
 
 // When the value of a workout day changes
 $(document).on("change", "#workout-days select", function() {
+  // CODE GOES HERE
 
 });
 
@@ -86,3 +156,13 @@ $(document).on("click", ".remove-workout", function() {
 });
 
 
+
+
+// Get the username of the currently logged-in user
+function getUser() {
+  // CODE GOES HERE
+
+
+  // return actual username (currently a string)
+  return "12345";
+}
