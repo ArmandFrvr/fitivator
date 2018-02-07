@@ -38,6 +38,17 @@ module.exports = function(sequelize, DataTypes) {
       set: function(val) {
         this.setDataValue("matchQuestions", val.join(";"));
       }
+    },
+    imgURL: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        isUrl: true
+      }
+    },
+    externalID: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   });
 
