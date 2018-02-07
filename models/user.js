@@ -16,6 +16,21 @@ module.exports = function(sequelize, DataTypes) {
         isAlpha: true  // only allow letters
       }
     },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        min: 1,
+        isAlpha: true
+      }
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isEmail: true
+      }
+    },
     phone: {
       type: DataTypes.INTEGER.UNSIGNED,
       validate: {
@@ -29,6 +44,20 @@ module.exports = function(sequelize, DataTypes) {
     fitCash: {
       type: DataTypes.DECIMAL(10,2),
       default: 0.00
+    },
+    wantsCalls: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+      default: false
+    },
+    team: {
+      type: DataTypes.STRING,
+      default: "Bootcamp Brawlers"  // hardcoded value until we support multiple teams
+    },
+    makesCalls: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+      default: false
     },
     matchQuestions: {
       type: DataTypes.STRING,
