@@ -92,7 +92,7 @@ function addUser(username, email, password) {
     wantsCalls: false,
     makesCalls: false
     // externalID: externalID
-  }
+  };
 
   $.post("/api/users/", newUser, function() {
     // Once the user is created, log them in and take them to their profile page

@@ -155,7 +155,7 @@
                             <div class="admin-up d-flex justify-content-start">
                                 <i class="fa fa-users py-4" id="user-icon"></i>
                                 <div class="data">
-                                    <h5 class="font-bold dark-grey-text">Edit Profile - <span class="text-muted">Complete your profile</span></h5>
+                                    <h5 class="font-bold dark-grey-text">Edit Profile - <span class="text-muted">Complete your profile</span><span class="badge" aria-live="polite" id="saved">Saved</span></h5>
                                 </div>
                             </div>
                             <!--/.Card Data-->
@@ -168,14 +168,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="md-form form-sm">
-                                            <input type="text" id="fname" class="form-control">
-                                            <label for="fname" class="">First name</label>
+                                            <input type="text" id="firstName" class="form-control profile-field" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                            <label for="firstName" class="">First name</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="md-form form-sm">
-                                            <input type="text" id="lname" class="form-control">
-                                            <label for="lname" class="">Last name</label>
+                                            <input type="text" id="lastName" class="form-control profile-field" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                            <label for="lastName" class="">Last name</label>
                                         </div>
                                     </div>
                                 </div>
@@ -188,14 +188,14 @@
                                 <div class="row">
                                     <div class="col-md-6"">
                                         <div class="md-form form-sm">
-                                            <input type="text" id="uname" class="form-control">
-                                            <label for="uname" class="">Username</label>
+                                            <input type="text" id="uname" class="form-control" disabled autocorrect="off" autocapitalize="off" spellcheck="false">
+                                            <label for="uname" class="disabled">Username</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6"">
                                         <div class="md-form form-sm">
-                                            <input type="text" id="email" class="form-control">
+                                            <input type="text" id="email" class="form-control profile-field" autocorrect="off" autocapitalize="off" spellcheck="false">
                                             <label for="email" class="">Email address</label>
                                         </div>
                                     </div>
@@ -209,8 +209,8 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="checkbox" class="filled-in" id="call-want">
-                                            <label for="call-want">I want reminder calls for my workouts!</label>
+                                            <input type="checkbox" class="filled-in profile-checkbox" id="wantsCalls">
+                                            <label for="wantsCalls">I want reminder calls for my workouts!</label>
                                         </div>
                                     </div>
                                 </div>
@@ -220,7 +220,7 @@
                                     <div class="col-md-6">
                                         <div class="md-form form-sm">
                                             <i class="fa fa-phone prefix"></i>
-                                            <input type="tel" id="phone" class="form-control">
+                                            <input type="tel" id="phone" class="form-control profile-field">
                                             <label for="phone">Phone Number:</label>
                                         </div>
                                     </div>
@@ -353,7 +353,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="checkbox" class="filled-in" id="call-make"
+                                            <input type="checkbox" class="filled-in profile-checkbox" id="call-make"
                                                 aria-describedby="call-make-desc">
                                             <label for="call-make">I want to help motivate other people!</label>
                                             <p class="description" id="call-make-desc">Sign up to call someone else at their scheduled workout time.  If you call on time, they might reward you with FitCash!</p>
@@ -400,7 +400,7 @@
                                         <p class="description">Tell us a little about yourself, your workout goals, and what motivates you.  This text is visible to other users when searching for motivation partners.</p>
                                         <!--Basic textarea-->
                                         <div class="md-form">
-                                            <textarea type="text" id="aboutMe" class="md-textarea"></textarea>
+                                            <textarea type="text" id="aboutMe" class="md-textarea profile-field"></textarea>
                                             <label for="aboutMe">I am awesome!</label>
                                         </div>
 

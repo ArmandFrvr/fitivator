@@ -23,10 +23,10 @@ $.get("/api/users/" + currentUser, function(data) {
 
     // Once doc is loaded, fill it out with info we just grabbed
     $(document).ready(function() {
-      $("#fname").val(user.firstName);
-      fixFieldState("#fname");
-      $("#lname").val(user.lastName);
-      fixFieldState("#lname");
+      $("#firstName").val(user.firstName);
+      fixFieldState("#firstName");
+      $("#lastName").val(user.lastName);
+      fixFieldState("#lastName");
       $("#uname").val(user.username);
       fixFieldState("#uname");
       $("#email").val(user.email);
@@ -35,8 +35,8 @@ $.get("/api/users/" + currentUser, function(data) {
       fixFieldState("#team");
       $("#aboutMe").val(user.aboutMe);
       fixFieldState("#aboutMe");
-      $("call-want").prop("checked", user.wantsCalls);
-      $("call-make").prop("checked", user.makesCalls);
+      $("wantsCalls").prop("checked", user.wantsCalls);
+      $("makesCalls").prop("checked", user.makesCalls);
       $("#phone").val(user.phone);
       fixFieldState("#phone");
 
@@ -81,7 +81,7 @@ $(document).ready(function() {
   });
 
 // Checkbox to show/hide workout buddy section
-  $("#call-want").on("change", function() {
+  $("#wantsCalls").on("change", function() {
 
     if($(this).prop("checked")) {
       $("#call-want-section").slideDown(500);
@@ -94,7 +94,7 @@ $(document).ready(function() {
 
 
   // Checkbox to sign up to make calls
-  $("#call-make").on("change", function() {
+  $("#makesCalls").on("change", function() {
 
     if($(this).prop("checked")) {
       $("#call-make-section").slideDown(500);
@@ -190,10 +190,35 @@ $(document).on("click", ".remove-workout", function() {
 
 // Profile field changes
 $(document).on("change", ".profile-field", function() {
-  // Update db with current states of all fields
-
+  let newInfo = {};
+  newInfo[$(this).attr("id")] = $(this).val();
+  updateUser(newInfo);
 });
 
+// Checkbox state changes
+$(document).on("change", ".profile-checkbox", function() {
+  let newInfo = {};
+  newInfo[$(this).attr("id")] = $(this).prop("checked");
+  updateUser(newInfo);
+});
+
+// Updates the current user with the new information
+function updateUser(newInfo) {
+  $.ajax({ // TIL "$.put" shortcut doesn't exist.  Anyone know why??
+    method: "PUT",
+    url: "/api/users/" + currentUser,
+    data: newInfo
+  })
+  .then(function() {
+    // show "updated" indicator
+    $("#saved").slideDown(500);
+    $("#saved").show();
+    // After 2 seconds, saved indicator disappears
+    setTimeout(function() {
+      $("#saved").fadeOut(500);
+    }, 2000);
+  });
+}
 
 // MDB workaround for prefilled field labels
 function fixFieldState(inputField) {
