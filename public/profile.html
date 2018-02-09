@@ -49,54 +49,7 @@
             <!-- Side navigation links -->
             <li>
                 <ul class="collapsible collapsible-accordion">
-
-<!--                     <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-photo"></i> Pages<i class="fa fa-angle-down rotate-icon"></i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="../pages/login.html" class="waves-effect">Login</a>
-                                </li>
-                                <li><a href="../pages/register.html" class="waves-effect">Register</a>
-                                </li>
-                                <li><a href="../pages/pricing.html" class="waves-effect">Pricing</a>
-                                </li>
-                                <li><a href="../pages/about.html" class="waves-effect">About us</a>
-                                </li>
-                                <li><a href="../pages/single.html" class="waves-effect">Single post</a>
-                                </li>
-                                <li><a href="../pages/post.html" class="waves-effect">Post listing</a>
-                                </li>
-                                <li><a href="../pages/landing.html" class="waves-effect">Landing page</a>
-                                </li>
-                                <li><a href="../pages/customers.html" class="waves-effect">Cusomers</a>
-                                </li>
-                                <li><a href="../pages/invoice.html" class="waves-effect">Invoice</a>
-                                </li>
-                                <li><a href="../pages/page-creator.html" class="waves-effect">Page Creator</a>
-                                </li>
-                                <li><a href="../pages/support.html" class="waves-effect">Support</a>
-                                </li>
-                                <li><a href="../pages/chat.html" class="waves-effect">Chat</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li> -->
-
-<!--                     <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-user"></i> Profile<i class="fa fa-angle-down rotate-icon"></i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="../profile/basic-1.html" class="waves-effect">Basic 1</a>
-                                </li>
-                                <li><a href="../profile/basic-2.html" class="waves-effect">Basic 2</a>
-                                </li>
-                                <li><a href="../profile/extended.html" class="waves-effect">Extended</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li> -->
-
-
-
-                    <!-- Simple link -->
+         <!-- Simple link -->
                     <li><a href="../alerts/alerts.html" class="collapsible-header waves-effect"><i class="fa fa-tachometer"></i> Dashboard</a></li>
 
                     <li><a href="/profile" class="collapsible-header waves-effect"><i class="fa fa-user"></i> Profile</a></li>
@@ -323,7 +276,62 @@
                                     <div class="row" id="workout-btn-row">
                                         <div class="col-md-6">
                                             <div class="md-form form-small">
-                                                <button id="find-partner" class="btn btn-primary btn-block">Find Motivation Partner</button>
+                                                <button id="find-partner" class="btn btn-primary btn-block" data-toggle="modal" data-target="#motivatorModal">Find Motivation Partner</button>
+<!-- Modal -->
+<div class="modal fade" id="motivatorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="carousel-item active">
+
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <img class="img-fluid" src="images/Crazy-buff-guy.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Motivator #1</h4>
+                                            <p class="card-text">Working with me will get you results! Let's pump some iron!!!</p>
+                                            <a class="btn btn-primary">Pick Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-12 clearfix d-none d-md-block">
+                                    <div class="card">
+                                        <img class="img-fluid" src="images/femaletrainer.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Motivator #2</h4>
+                                            <p class="card-text">Treat your body right! Work out, feels great!</p>
+                                            <a class="btn btn-primary">Pick Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-12 clearfix d-none d-md-block">
+                                    <div class="card">
+                                        <img class="img-fluid" src="images/personaltrainer3.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Motivator #3</h4>
+                                            <p class="card-text">I'm just here for the money...</p>
+                                            <a class="btn btn-primary">Pick Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
                                             </div>
                                         </div>
                                     </div>

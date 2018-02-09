@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>FITIVATOR</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body class="fixed-sn deep-purple-skin" id="custom">
+
+    <!--Main Navigation-->
+    <header>
+
+        <!-- Sidebar navigation -->
+        <div id="slide-out" class="side-nav sn-bg-4 fixed">
+            <ul class="custom-scrollbar list-unstyled">
+            <!-- Logo -->
+            <li class="logo-sn waves-effect">
+                <div class=" text-center">
+                    <a href="#" class="pl-0"><img id="sidebar-logo" src="images/fitivator-logo-outlined.svg" class="" alt="Fitivator"></a>
+                </div>
+            </li>
+            <!--/. Logo -->
+
+            <!--Search Form-->
+            <li>
+                <form class="search-form" role="search">
+                    <div class="form-group waves-effect">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </li>
+            <!--/.Search Form-->
+            <!-- Side navigation links -->
+            <li>
+                <ul class="collapsible collapsible-accordion">
+         <!-- Simple link -->
+                    <li><a href="../alerts/alerts.html" class="collapsible-header waves-effect"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+
+                    <li><a href="/profile" class="collapsible-header waves-effect"><i class="fa fa-user"></i> Profile</a></li>
+
+                    <li><a href="../alerts/alerts.html" class="collapsible-header waves-effect"><i class="fa fa-bell-o"></i> Notifications</a></li>
+
+                    <li><a href="modals.html" class="collapsible-header waves-effect"><i class="fa fa-calendar-check-o"></i> My Matches</a></li>
+
+                </ul>
+            </li>
+            <!--/. Side navigation links -->
+            </ul>
+            <div class="sidenav-bg mask-strong" id="sidenav-bg"></div>
+        </div>
+        <!--/. Sidebar navigation -->
+
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav">
+            <!-- SideNav slide-out button -->
+            <div class="float-left">
+                <a href="#" data-activates="slide-out" class="button-collapse black-text"><i class="fa fa-bars"></i></a>
+            </div>
+            <!-- Breadcrumb-->
+            <div class="breadcrumb-dn mr-auto">
+                <p>MY FITIVATOR PROFILE</p>
+            </div>
+
+            <!--Navbar links-->
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown notifications-nav">
+                    <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <span class="badge red">3</span> <i class="fa fa-bell"></i>
+                        <span class="d-none d-md-inline-block">Notifications</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-money mr-2" aria-hidden="true"></i>
+                            <span>New order received</span>
+                            <span class="float-right"><i class="fa fa-clock-o" aria-hidden="true"></i> 13 min</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-money mr-2" aria-hidden="true"></i>
+                            <span>New order received</span>
+                            <span class="float-right"><i class="fa fa-clock-o" aria-hidden="true"></i> 33 min</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-line-chart mr-2" aria-hidden="true"></i>
+                            <span>Your campaign is about to end</span>
+                            <span class="float-right"><i class="fa fa-clock-o" aria-hidden="true"></i> 53 min</span>
+                        </a>
+                    </div>
+                </li>
+<!--                 <li class="nav-item">
+                    <a class="nav-link waves-effect"><i class="fa fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link waves-effect"><i class="fa fa-comments-o"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect" href="/profile" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Profile</span></a>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">Log Out</a>
+                        <!-- <a class="dropdown-item" href="#">My account</a> -->
+                    </div>
+                </li>
+
+            </ul>
+            <!--/Navbar links-->
+        </nav>
+        <!-- /.Navbar -->
+
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#motivatorModal">
+        Launch demo modal
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="motivatorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="carousel-item active">
+
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Motivator #1</h4>
+                                            <p class="card-text">Working with me will get you results! Let's pump some iron!!!</p>
+                                            <a class="btn btn-primary">Pick Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-12 clearfix d-none d-md-block">
+                                    <div class="card">
+                                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Motivator #2</h4>
+                                            <p class="card-text">Treat your body right! Work out, feels great!</p>
+                                            <a class="btn btn-primary">Pick Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-12 clearfix d-none d-md-block">
+                                    <div class="card">
+                                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Motivator #3</h4>
+                                            <p class="card-text">I'm just here for the money...</p>
+                                            <a class="btn btn-primary">Pick Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        </main>
+        <!--Main layout-->
+    
+    
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+    
+        <script>
+            // SideNav Initialization
+            $(".button-collapse").sideNav();
+    
+            var container = document.querySelector('.custom-scrollbar');
+            Ps.initialize(container, {
+                wheelSpeed: 2,
+                wheelPropagation: true,
+                minScrollbarLength: 20
+            });
+        </script>
+        <script src="./js/moment.js"></script>
+        <script>
+            moment().format();
+        </script>
+        <!--Custom scripts-->
+        <script type="text/javascript" src="./js/profile.js"></script>
+    </body>
+    
+    </html>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
