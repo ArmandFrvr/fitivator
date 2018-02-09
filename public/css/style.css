@@ -139,6 +139,11 @@ button.icon-btn {
     font-style: italic;
 }
 
-#username, #email, #password {
+#username, #email, #password,
+#username2, #password2 {
     color: white;
+}
+
+div#login {
+    display: none;
 }
