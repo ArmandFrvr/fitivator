@@ -10,16 +10,16 @@ $(document).ready(function() {
     sessionStorage.clear();
 
     var user = $("#username").val().replace(/[^a-zA-Z0-9]+/g, '');
-    // var tryUser = getUser(user);
+    var password = $("#password").val();
 
     $.get("/api/users/" + user, function(data) {
-      alert("data is: " + data);
+      alert("password is: " + password);
 
       // If user doesn't exist, add them to the db (just username and email for now)
       if(!data) {
         console.log("User not found");
         let email = $("#email").val().replace(/[^a-zA-Z@.-0-9]+/g, '');
-        addUser(user, email);
+        addUser(user, email, password);
       }
       else {
         // Log the user in
@@ -38,12 +38,13 @@ $(document).ready(function() {
 
 
 // Adds user to db
-function addUser(username, email) {
+function addUser(username, email, password) {
 
   // Construct a new user object to send to the db
   let newUser = {
     username: username,
-    email: email
+    email: email,
+    password: password
     // externalID: externalID
   }
   console.log("Creating user: " + newUser);

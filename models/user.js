@@ -1,3 +1,8 @@
+var Sequelize = require('sequelize');
+var EncryptedField = require('sequelize-encrypted');
+var key = process.env.ENC_KEY || '6899312f568704dff96d3d86cbceb0649ede2b06e1a9e04df1c58b0b9fc69fe4';
+var enc_fields = EncryptedField(Sequelize, key);
+
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     username: {
@@ -8,6 +13,21 @@ module.exports = function(sequelize, DataTypes) {
         isAlphanumeric: true  // only allow letters
       }
     },
+    encrypted: enc_fields.vault('encrypted'),
+    password: enc_fields.field("password", {
+      type: DataTypes.STRING,
+      validate: {
+        notContains: "<",
+        notContains: ">",
+        len: [5]
+      },
+      get: function() {
+        return this.getDataValue("password");
+      },
+      set: function(val) {
+          this.setDataValue("password", val);
+      }
+    }),
     firstName: {
       type: DataTypes.STRING,
       default: null,
@@ -86,6 +106,18 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       default: null,
       allowNull: true
+    }
+  },
+  {
+    instanceMethods: {
+      toJSON: function() {
+        var values = this.get();
+        delete values.password;
+        delete values.encrypted;
+        return values;
+        // not working... see https://github.com/mickhansen/ssacl-attribute-roles for
+        // alternative
+      }
     }
   });
 

@@ -3,6 +3,11 @@
 var fs        = require('fs');
 var path      = require('path');
 var Sequelize = require('sequelize');
+
+// var EncryptedField = require('sequelize-encrypted');
+// var key = process.env.ENC_KEY || '6899312f568704dff96d3d86cbceb0649ede2b06e1a9e04df1c58b0b9fc69fe4';
+// var enc_fields = EncryptedField(Sequelize, key);
+
 var basename  = path.basename(module.filename);
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
@@ -32,5 +37,7 @@ Object.keys(db).forEach(function(modelName) {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+// db.EncryptedField = EncryptedField;
+// db.enc_fields = enc_fields;
 
 module.exports = db;
