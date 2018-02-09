@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     firstName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      default: null,
       validate: {
         min: 1,
         isAlpha: true  // only allow letters
@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     lastName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      default: null,
       validate: {
         min: 1,
         isAlpha: true
@@ -33,13 +33,15 @@ module.exports = function(sequelize, DataTypes) {
     },
     phone: {
       type: DataTypes.INTEGER.UNSIGNED,
+      default: null,
       validate: {
         len: [7],
         isInt: true
       }
     },
     aboutMe: {
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
+      default: null
     },
     fitCash: {
       type: DataTypes.DECIMAL(10,2),
@@ -61,15 +63,20 @@ module.exports = function(sequelize, DataTypes) {
     },
     matchQuestions: {
       type: DataTypes.STRING,
+      default: null,
       get: function() {
-        return this.getDataValue("matchQuestions").split(";");
+        if(this.getDataValue("matchQuestions")) {
+          return this.getDataValue("matchQuestions").split(";");
+        }
+        return null;
       },
       set: function(val) {
-        this.setDataValue("matchQuestions", val.join(";"));
+          this.setDataValue("matchQuestions", val.join(";"));
       }
     },
     imgURL: {
       type: DataTypes.STRING,
+      default: null,
       allowNull: true,
       validate: {
         isUrl: true
@@ -77,6 +84,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     externalID: {
       type: DataTypes.STRING,
+      default: null,
       allowNull: true
     }
   });

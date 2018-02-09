@@ -2,11 +2,13 @@
 // List of days so we can support multiple time zones
 var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-var currentUser;
+var currentUser = sessionStorage.getItem("username");
 var currentUserID;
 
 // If user isn't logged in, redirect them to the login screen.
-// CODE GOES HERE
+if(!currentUser) {
+  window.location.href = "/";
+}
 
 
 // Get the user's ID

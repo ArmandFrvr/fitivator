@@ -8,11 +8,11 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/users/:id", function(req, res) {
+  app.get("/api/users/:uname", function(req, res) {
 
     db.User.findOne({
       where: {
-        id: req.params.id
+        username: req.params.uname
       },
       include: [db.Workout]
     }).then(function(dbUser) {
@@ -31,7 +31,7 @@ module.exports = function(app) {
       req.body,
       {
         where: {
-          id: req.body.id
+          username: req.body.username
         }
       }).then(function(dbUser) {
         res.json(dbUser);
