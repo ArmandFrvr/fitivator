@@ -3,26 +3,56 @@
 var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 var currentUser = sessionStorage.getItem("username");
-var currentUserID;
 
 // If user isn't logged in, redirect them to the login screen.
 if(!currentUser) {
   window.location.href = "/";
 }
 
+var user;
 
-// Get the user's ID
-// CODE GOES HERE
+$.get("/api/users/" + currentUser, function(data) {
 
+  if(!data) { // User not found, maybe session data is bad or db changed
+    window.location.href = "/";
+  }
+  else {  // we found our user
 
-// Select all of the user's info from the db so we have it to hand
-// CODE GOES HERE
-// currentUser = selectOne * from users where user.externalID = currentUserID
-// currentUser should be a JSON object so we can reference the user fields.
+    // store to var for later use
+    user = data;
 
+    // Once doc is loaded, fill it out with info we just grabbed
+    $(document).ready(function() {
+      $("#fname").val(user.firstName);
+      fixFieldState("#fname");
+      $("#lname").val(user.lastName);
+      fixFieldState("#lname");
+      $("#uname").val(user.username);
+      fixFieldState("#uname");
+      $("#email").val(user.email);
+      fixFieldState("#email");
+      $("#team").val(user.team);
+      fixFieldState("#team");
+      $("#aboutMe").val(user.aboutMe);
+      fixFieldState("#aboutMe");
+      $("call-want").prop("checked", user.wantsCalls);
+      $("call-make").prop("checked", user.makesCalls);
+      $("#phone").val(user.phone);
+      fixFieldState("#phone");
+
+      // need to loop through user.Workouts array and add a workout section
+      // for each existing entry, populating them with the correct days and times
+
+    });
+  }
+});
 
 
 $(document).ready(function() {
+
+  // Once we have an opacity mask, we need to hide it here.
+  // (mask prevents users from seeing content if they're just going
+  // to get redirected for not being logged in)
 
   // Button to add additional workout days
   $("#add-workout").on("click", function() {
@@ -158,13 +188,15 @@ $(document).on("click", ".remove-workout", function() {
 });
 
 
+// Profile field changes
+$(document).on("change", ".profile-field", function() {
+  // Update db with current states of all fields
+
+});
 
 
-// Get the username of the currently logged-in user
-function getUser() {
-  // CODE GOES HERE
-
-
-  // return actual username (currently a string)
-  return "12345";
+// MDB workaround for prefilled field labels
+function fixFieldState(inputField) {
+    $(inputField).trigger("focusin");
+    $(inputField).trigger("blur");
 }

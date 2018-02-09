@@ -83,10 +83,17 @@ function addUser(username, email, password) {
   let newUser = {
     username: username,
     email: email,
-    password: password
+    password: password,
+
+    // these are the defaults in the model but it's ignoring them for some reason
+    // so setting them explicitly here
+    aboutMe: "I am awesome!",
+    team: "Bootcamp Brawlers",
+    wantsCalls: false,
+    makesCalls: false
     // externalID: externalID
   }
-  console.log("Creating user: " + newUser);
+
   $.post("/api/users/", newUser, function() {
     // Once the user is created, log them in and take them to their profile page
     // so they can fill it out.

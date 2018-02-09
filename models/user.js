@@ -61,7 +61,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     aboutMe: {
       type: DataTypes.TEXT,
-      default: null
+      default: "I am awesome!"
     },
     fitCash: {
       type: DataTypes.DECIMAL(10,2),
@@ -69,7 +69,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     wantsCalls: {
       type: DataTypes.BOOLEAN,
-      allowNull: true,
       default: false
     },
     team: {
@@ -78,7 +77,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     makesCalls: {
       type: DataTypes.BOOLEAN,
-      allowNull: true,
       default: false
     },
     matchQuestions: {
