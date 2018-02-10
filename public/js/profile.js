@@ -35,11 +35,17 @@ $.get("/api/users/" + currentUser, function(data) {
       fixFieldState("#team");
       $("#aboutMe").val(user.aboutMe);
       fixFieldState("#aboutMe");
-      $("wantsCalls").prop("checked", user.wantsCalls);
-      $("makesCalls").prop("checked", user.makesCalls);
+      $("#wantsCalls").prop("checked", user.wantsCalls);
+      $("#makesCalls").prop("checked", user.makesCalls);
       $("#phone").val(user.phone);
       fixFieldState("#phone");
-      $("#wantsCalls").prop("checked", user.wantsCalls);
+
+      // If this was enabled, show their workouts
+      if(user.wantsCalls) {
+        $("#wantsCalls-section").slideDown(500);
+        $("#wantsCalls-section").show();
+      }
+
 
       // need to loop through user.Workouts array and add a workout section
       // for each existing entry, populating them with the correct days and times
@@ -81,26 +87,26 @@ $(document).ready(function() {
     $("#workout-btn-row").before(workoutDiv);
   });
 
-  // Button to find workout partner
-  $("#find-partner").on("click", function() {
+  // Button to find workout partner.  Was find-partner
+  $("#viewMatches").on("click", function() {
 
     // CODE GOES HERE TO FIND MATCH
 
     // first check to see if they already have a partner
-    if(currentUser.matchedUser) {
+    if(currentUser.matchedUserId) {
       // This isn't falsy, so they already have a match
       // Let them know they're currently matched with user xyz
       // Need to selectOne from users where user.id = currentUser.matchedUser
       let theirMatch; // = CODE GOES HERE to select them
 
       // for now
-      alert("You are already matched with " + theirMatch.Firstname);
+      alert("Warning: you are already matched with someone.");
       // Make some nice UI here where they can choose someone else if their match sucks
 
     }
     else {
       // They don't have a match, so find them one
-      let matchString = user.matchQuestions;
+      // let matchString = user.matchQuestions;
 
       // let unmatchedUsers =
       // Select all users from db who don't have a matched user
@@ -117,22 +123,57 @@ $(document).ready(function() {
       var topThree = [];
 
       // https://stackoverflow.com/questions/4956593/optimal-algorithm-for-returning-top-k-values-from-an-array-of-length-n
-      for(let i = 0; i < unmatchedUsers.length; i++) {
+      // for(let i = 0; i < unmatchedUsers.length; i++) {
 
-
-
-
-      }
+      // }
 
       // bestUser should
 
     }
 
+   // Last step is to hide the questions and show the results div
+    $("#matchQsDiv").hide();
+    $("#resultsDiv").show();
+    $("#back").show();
 
-  })
+  });
+
+  // Button to go back to previous screen (quiz)
+  $("#back").on("click", function() {
+    $("#resultsDiv").hide();
+    $("#back").hide();
+    $("#matchQsDiv").show();
+  });
 
 
+
+}); // END DOCUMENT READY
+
+// Buttons to pick Motivation Partner #1, 2, or 3
+$(document).on("click", ".pick", function() {
+  // Pull the # out of the button id
+  let num = $(this).attr("id").substring(4,5);
+  let partnerName = $("#m" + num + "name").text();
+  alert("Selecting Motivator #" + num + ".  We'll notify them that you've "
+   + "chosen them as your motivation partner.  If it's a match, you'll be "
+   + "hearing from us!");
+  // Grab the (ID?  Username?  Going to hide it in the DOM somewhere so
+  // we can grab it and make some API calls.)  Technically we don't want
+  // to link them yet, because it should kick off a notification that goes
+  // to the motivator for them to accept the request.  That part isn't written
+  // yet though.  :)
+
+  // Maybe we need to add another db field for potential matches that
+  // aren't confirmed yet...  I'd like to show this info on the profile page,
+  // that there's a match pending.
+
+  //For now:
+  $("#find-partner").prop("disabled", true);
+  $("#find-partner").after("<i> Awaiting confirmation from " + partnerName + ".</i>");
+  $("#close").trigger("click");
 });
+
+
 
 // When the value of a workout day changes
 $(document).on("change", "#workout-days select", function() {

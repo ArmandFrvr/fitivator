@@ -56,7 +56,7 @@
             <li>
                 <ul class="collapsible collapsible-accordion">
          <!-- Simple link -->
-                    <li><a href="../alerts/alerts.html" class="collapsible-header waves-effect"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+                    <li><a href="/dashboard" class="collapsible-header waves-effect"><i class="fa fa-tachometer"></i> Dashboard</a></li>
 
                     <li><a href="/profile" class="collapsible-header waves-effect"><i class="fa fa-user"></i> Profile</a></li>
 
@@ -160,11 +160,9 @@
                             </div>
                             <!--/.Card Data-->
 
-                            <!--Profile Card content-->
+<!--PROFILE PAGE MAIN-->
                             <div class="card-body text-left">
-
-
-                                <!-- Grid row -->
+<!-- BASIC INFO -->
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="md-form form-sm">
@@ -179,12 +177,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Grid row -->
 
-
-
-
-                                <!-- Grid row -->
                                 <div class="row">
                                     <div class="col-md-6"">
                                         <div class="md-form form-sm">
@@ -200,88 +193,173 @@
                                         </div>
                                     </div>
                                  </div>
-                                <!-- Grid row -->
+<!-- END BASIC INFO -->
+                                <br>
 
-
-<br>
-
-                                <!-- Grid row -->
+<!-- WANT CALLS SECTION -->
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="filled-in profile-checkbox" id="wantsCalls">
-                                            <label for="wantsCalls">I want reminder calls for my workouts!</label>
-                                        </div>
+                                  <div class="col-md-12">
+                                    <div class="form-group">
+                                      <input type="checkbox" class="filled-in profile-checkbox" id="wantsCalls">
+                                      <label for="wantsCalls">I want reminder calls for my workouts!</label>
                                     </div>
+                                  </div>
                                 </div>
 
                                 <div id="wantsCalls-section" class="col-md-11 offset-md-1">
                                   <div class="row">
                                     <div class="col-md-6">
-                                        <div class="md-form form-sm">
-                                            <i class="fa fa-phone prefix"></i>
-                                            <input type="tel" id="phone" class="form-control profile-field">
-                                            <label for="phone">Phone Number:</label>
-                                        </div>
+                                      <div class="md-form form-sm">
+                                        <i class="fa fa-phone prefix"></i>
+                                        <input type="tel" id="phone" class="form-control profile-field">
+                                        <label for="phone">Phone Number:</label>
+                                      </div>
                                     </div>
                                   </div>
 
-
                                   <div class="row">
-                                    <!-- <div class="col-md-6 offset-md"><hr></div> -->
                                     <div class="w-100"></div>
                                     <div class="col-md-3 text-center">
-                                        <h6 id="day"><strong><u>Workout Day</u></strong></h6>
+                                      <h6 id="day"><strong><u>Workout Day</u></strong></h6>
                                     </div>
                                     <div class="col-md-3 text-center">
-                                        <h6 id="time"><strong><u>Time</u></strong></h6>
+                                      <h6 id="time"><strong><u>Time</u></strong></h6>
                                     </div>
                                   </div>
 
                                   <div class="row workout-row">
                                     <div class="col-md-3">
-                                        <div class="md-form form-sm">
-                                            <select class="form-control" aria-labelledby="day">
-                                              <option value="Sunday">Sunday</option>
-                                              <option value="Monday">Monday</option>
-                                              <option value="Tuesday">Tuesday</option>
-                                              <option value="Wednesday">Wednesday</option>
-                                              <option value="Thursday">Thursday</option>
-                                              <option value="Friday">Friday</option>
-                                              <option value="Saturday">Saturday</option>
-                                            </select>
-                                        </div>
+                                      <div class="md-form form-sm">
+                                        <select class="form-control" aria-labelledby="day">
+                                          <option value="Sunday">Sunday</option>
+                                          <option value="Monday">Monday</option>
+                                          <option value="Tuesday">Tuesday</option>
+                                          <option value="Wednesday">Wednesday</option>
+                                          <option value="Thursday">Thursday</option>
+                                          <option value="Friday">Friday</option>
+                                          <option value="Saturday">Saturday</option>
+                                        </select>
+                                      </div>
                                     </div>
                                     <div class="col-md-3">
-                                        <div class="md-form form-sm">
-                                            <i class="fa fa-clock-o prefix"></i>
-                                            <input type="time" id="time-1" class="form-control">
-                                        </div>
+                                      <div class="md-form form-sm">
+                                        <i class="fa fa-clock-o prefix"></i>
+                                        <input type="time" id="time-1" class="form-control">
+                                      </div>
                                     </div>
                                     <div class="col-md-1">
-                                        <div class="md-form form-sm">
-                                            <button class="remove-workout icon-btn" aria-label="Remove Workout">
-                                                <i class="fa fa-times-circle-o"></i>
-                                            </button>
-                                        </div>
+                                      <div class="md-form form-sm">
+                                        <button class="remove-workout icon-btn" aria-label="Remove Workout">
+                                          <i class="fa fa-times-circle-o"></i>
+                                        </button>
+                                      </div>
                                     </div>
                                   </div>
 
                                   <div class="row" id="workout-btn-row">
                                     <div class="col-md-6">
-                                        <div class="md-form form-small">
-                                            <button id="add-workout" class="btn btn-default btn-block">Add Workout</button>
-                                        </div>
+                                      <div class="md-form form-small">
+                                        <button id="add-workout" class="btn btn-primary btn-block">Add Workout</button>
+                                      </div>
                                     </div>
                                   </div>
 
+                                  <div class="row" id="workout-btn-row">
+                                    <div class="col-md-6">
+                                      <div class="md-form form-small">
+                                        <button id="find-partner" class="btn btn-default btn-block" data-toggle="modal" data-target="#motivatorModal">Find Motivation Partner</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+<!-- WANT CALLS SECTION -->
 
-                                    <div class="row" id="workout-btn-row">
-                                        <div class="col-md-6">
-                                            <div class="md-form form-small">
-                                                <button id="find-partner" class="btn btn-primary btn-block" data-toggle="modal" data-target="#motivatorModal">Find Motivation Partner</button>
+<!-- MAKE CALLS SECTION -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="checkbox" class="filled-in profile-checkbox" id="makesCalls"
+                                                aria-describedby="makesCalls-desc">
+                                            <label for="makesCalls">I want to help motivate other people!</label>
+                                            <p class="description" id="makesCalls-desc">Sign up to call someone else at their scheduled workout time.  If you call on time, they might reward you with FitCash!</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div id="makesCalls-section" class="col-md-11 offset-md-1">
+                                  <div class="row">
+                                    <div class="col-md-7 offset-md-2 text-center">
+                                        <p>Thanks!  We'll let you know when you're matched with someone.</p>
+                                    </div>
+                                  </div>
+                                </div>
+<!-- END MAKE CALLS SECTION -->
+
+<!-- TEAM/ABOUT INFO -->
+                                <br>
+                                <div class="row">
+                                    <!-- Grid column -->
+                                    <div class="col-md-6">
+                                        <div class="md-form form-sm">
+                                            <input type="text" id="team" class="form-control" disabled>
+                                            <label for="team" class="disabled">Team</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-md-12 about-text">
+                                    <h4 class="text-muted text-left my-4"><strong>About me</strong></h4>
+                                    <p class="description">Tell us a little about yourself, your workout goals, and what motivates you.  This text is visible to other users when searching for motivation partners.</p>
+                                    <div class="md-form">
+                                      <textarea type="text" id="aboutMe" class="md-textarea profile-field"></textarea>
+                                      <label for="aboutMe">I am awesome!</label>
+                                    </div>
+                                  </div>
+                                </div>
+<!-- END TEAM/ABOUT INFO -->
+                            </div>
+<!--END PROFILE PAGE MAIN-->
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Grid column -->
 
 
+<!-- PIC SECTION -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 mb-r">
+                        <!--Card-->
+                        <!-- <div class="card profile-card"> -->
+                            <!--Avatar-->
+<!--                             <div class="avatar z-depth-1-half mb-4">
+                                <img src="images/Spongebobwithglasses.jpg" class="rounded-circle" alt="First sample avatar image">
+                            </div>
+                            <div class="card-body pt-0 mt-0"> -->
+                                <!--Name-->
+                                <!-- <h3 class="mb-3 font-bold"><strong>SpongeBob Squarepants</strong></h3>
+                                <h6 class="font-bold cyan-text mb-4">Fry Cook</h6>
+                                <p class="mt-4 text-muted">Who lives in a pineapple under the sea?
+                                    Spongebob Squarepants
+                                    Absorbent and yellow and porous is he
+                                    Spongebob Squarepants
+                                    If nautical nonsense be something you wish
+                                    Spongebob Squarepants
+                                    Then drop on the deck and flop like a fish
+                                    Spongebob Squarepants</p>
+
+                                <a class="btn btn-info btn-rounded"> Follow</a> -->
+                            <!-- </div> -->
+                        <!-- </div> --><!--Card-->
+
+                    </div><!-- Grid column -->
+                </div><!--Grid row-->
+            </section>
+
+        </div>
+    </main>
+    <!--Main layout-->
 
 
 <!-- MODAL -->
@@ -290,14 +368,14 @@
         <div class="modal-content">
           <div class="modal-header">
             <h3 class="modal-title" id="exampleModalLabel">Find a Motivation Partner</h3>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
 
             <!-- MATCH QUESTIONS -->
-            <div id="#matchQsDiv">
+            <div id="matchQsDiv">
               <div class="col-md-12 clearfix d-md-block">
                 <div class="card">
                   <div class="card-body">
@@ -365,9 +443,9 @@
                           <img class="img-fluid motivator-img" src="images/Crazy-buff-guy.jpg" alt="">
                         </div>
                         <div class="card-body">
-                          <h4 class="card-title">Motivator #1</h4>
+                          <h4 class="card-title" id="m1name">Motivator #1</h4>
                           <p class="card-text">Working with me will get you results! Let's pump some iron!!!</p>
-                          <a class="btn btn-secondary" id="pick1btn">Pick Me</a>
+                          <a class="btn btn-secondary pick" id="pick1btn">Pick Me</a>
                         </div>
                       </div>
                     </div>
@@ -380,9 +458,9 @@
                           <img class="img-fluid motivator-img" src="images/femaletrainer.jpg" alt="">
                         </div>
                         <div class="card-body">
-                          <h4 class="card-title">Motivator #2</h4>
+                          <h4 class="card-title" id="m2name">Motivator #2</h4>
                           <p class="card-text">Treat your body right! Work out, feels great!</p>
-                          <a class="btn btn-secondary" id="pick2btn">Pick Me</a>
+                          <a class="btn btn-secondary pick" id="pick2btn">Pick Me</a>
                         </div>
                       </div>
                     </div>
@@ -395,9 +473,9 @@
                           <img class="img-fluid motivator-img" src="images/personaltrainer3.jpg" alt="">
                         </div>
                         <div class="card-body">
-                          <h4 class="card-title">Motivator #3</h4>
+                          <h4 class="card-title" id="m3name">Motivator #3</h4>
                           <p class="card-text">I'm just here for the money...</p>
-                          <a class="btn btn-secondary" id="pick3btn">Pick Me</a>
+                          <a class="btn btn-secondary pick" id="pick3btn">Pick Me</a>
                         </div>
                       </div>
                     </div>
@@ -422,9 +500,9 @@
 
           </div>
 
-          <div class="modal-footer">
+          <div class="modal-footer" id="quizFooter">
             <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-            <button type="button" class="btn btn-primary" id="back">Back</button>
+            <button type="button" class="btn btn-secondary" id="back">Back</button>
           </div>
 
         </div>
@@ -433,113 +511,6 @@
 <!-- END MODAL -->
 
 
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-<!-- CALL MAKING SECTION -->
-                                <!-- Grid row -->
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="filled-in profile-checkbox" id="makesCalls"
-                                                aria-describedby="makesCalls-desc">
-                                            <label for="makesCalls">I want to help motivate other people!</label>
-                                            <p class="description" id="makesCalls-desc">Sign up to call someone else at their scheduled workout time.  If you call on time, they might reward you with FitCash!</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div id="makesCalls-section" class="col-md-11 offset-md-1">
-                                  <div class="row">
-                                    <div class="col-md-7 offset-md-2 text-center">
-                                        <p>Thanks!  We'll let you know when you're matched with someone.</p>
-                                    </div>
-                                  </div>
-                                </div>
-<!-- END CALL MAKING SECTION -->
-
-
-
-
-                                <br>
-                                <!-- Grid row -->
-                                <div class="row">
-                                    <!-- Grid column -->
-                                    <div class="col-md-6">
-                                        <div class="md-form form-sm">
-                                            <input type="text" id="team" class="form-control" disabled>
-                                            <label for="team" class="disabled">Team</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- Grid row -->
-                                <div class="row">
-
-                                    <!-- Grid column -->
-                                    <div class="col-md-12 about-text">
-
-                                        <h4 class="text-muted text-left my-4"><strong>About me</strong></h4>
-                                        <p class="description">Tell us a little about yourself, your workout goals, and what motivates you.  This text is visible to other users when searching for motivation partners.</p>
-                                        <!--Basic textarea-->
-                                        <div class="md-form">
-                                            <textarea type="text" id="aboutMe" class="md-textarea profile-field"></textarea>
-                                            <label for="aboutMe">I am awesome!</label>
-                                        </div>
-
-                                    </div>
-                                    <!-- Grid column -->
-                                </div>
-                                <!-- Grid row -->
-                            </div>
-                            <!--/.Card content-->
-                        </div>
-                        <!--/.Card-->
-                    </div>
-                    <!-- Grid column -->
-
-
-<!-- PIC SECTION -->
-                    <!-- Grid column -->
-                    <div class="col-md-4 mb-r">
-                        <!--Card-->
-                        <!-- <div class="card profile-card"> -->
-                            <!--Avatar-->
-<!--                             <div class="avatar z-depth-1-half mb-4">
-                                <img src="images/Spongebobwithglasses.jpg" class="rounded-circle" alt="First sample avatar image">
-                            </div>
-                            <div class="card-body pt-0 mt-0"> -->
-                                <!--Name-->
-                                <!-- <h3 class="mb-3 font-bold"><strong>SpongeBob Squarepants</strong></h3>
-                                <h6 class="font-bold cyan-text mb-4">Fry Cook</h6>
-                                <p class="mt-4 text-muted">Who lives in a pineapple under the sea?
-                                    Spongebob Squarepants
-                                    Absorbent and yellow and porous is he
-                                    Spongebob Squarepants
-                                    If nautical nonsense be something you wish
-                                    Spongebob Squarepants
-                                    Then drop on the deck and flop like a fish
-                                    Spongebob Squarepants</p>
-
-                                <a class="btn btn-info btn-rounded"> Follow</a> -->
-                            <!-- </div> -->
-                        <!-- </div> -->
-                        <!--Card-->
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!--Grid row-->
-            </section>
-            <!--Section: Team v.1-->
-        </div>
-    </main>
-    <!--Main layout-->
 
 
     <!-- SCRIPTS -->

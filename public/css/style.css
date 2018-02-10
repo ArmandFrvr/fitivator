@@ -109,8 +109,8 @@ button.icon-btn {
   color: #C00000;
 }
 
-#call-want-section,
-#call-make-section {
+#wantsCalls-section,
+#makesCalls-section {
   display: none;
 }
 
@@ -203,7 +203,7 @@ div#login {
 }
 
 #resultsDiv {
-  display: none !important; /* Second screen-- hide for now */
+  display: none; /* Second screen-- hide for now */
 }
 
 /* MATCH QUESTION STYLES */
@@ -223,6 +223,12 @@ legend {
 }
 
 #viewMatches {
+  margin-left: 30%;
   margin-top: 1.5rem;
   margin-bottom: 0;
+}
+
+#back {
+  display: none;
+  background-color: #ac85f0;
 }
