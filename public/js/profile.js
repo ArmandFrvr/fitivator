@@ -39,6 +39,7 @@ $.get("/api/users/" + currentUser, function(data) {
       $("makesCalls").prop("checked", user.makesCalls);
       $("#phone").val(user.phone);
       fixFieldState("#phone");
+      $("#wantsCalls").prop("checked", user.wantsCalls);
 
       // need to loop through user.Workouts array and add a workout section
       // for each existing entry, populating them with the correct days and times
@@ -79,32 +80,6 @@ $(document).ready(function() {
 
     $("#workout-btn-row").before(workoutDiv);
   });
-
-// Checkbox to show/hide workout buddy section
-  $("#wantsCalls").on("change", function() {
-
-    if($(this).prop("checked")) {
-      $("#call-want-section").slideDown(500);
-      $("#call-want-section").show();
-    }
-    else {
-      $("#call-want-section").hide();
-    }
-  });
-
-
-  // Checkbox to sign up to make calls
-  $("#makesCalls").on("change", function() {
-
-    if($(this).prop("checked")) {
-      $("#call-make-section").slideDown(500);
-      $("#call-make-section").show();
-    }
-    else {
-      $("#call-make-section").hide();
-    }
-  });
-
 
   // Button to find workout partner
   $("#find-partner").on("click", function() {
@@ -188,18 +163,32 @@ $(document).on("click", ".remove-workout", function() {
 });
 
 
-// Profile field changes
+// Profile field changes - update database
 $(document).on("change", ".profile-field", function() {
   let newInfo = {};
   newInfo[$(this).attr("id")] = $(this).val();
   updateUser(newInfo);
 });
 
-// Checkbox state changes
+// Checkbox state changes.  Since checkbox values update immediately,
+// we can do both the UI stuff and db update in one fxn.
+// (Doesn't work for input fields that don't update until they lose focus)
 $(document).on("change", ".profile-checkbox", function() {
+  let boxId = $(this).attr("id");
+
+  // Update the database
   let newInfo = {};
-  newInfo[$(this).attr("id")] = $(this).prop("checked");
+  newInfo[boxId] = $(this).prop("checked");
   updateUser(newInfo);
+
+  // Update the UI (expand or collapse the section)
+  if($("#" + boxId).prop("checked")) {
+    $("#" + boxId + "-section").slideDown(500);   // aaaaand, this is where having good
+    $("#" + boxId + "-section").show();           // naming conventions pays off
+  }
+  else {
+    $("#" + boxId + "-section").hide();
+  }
 });
 
 // Updates the current user with the new information
