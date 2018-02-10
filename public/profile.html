@@ -283,61 +283,114 @@
                                         <div class="col-md-6">
                                             <div class="md-form form-small">
                                                 <button id="find-partner" class="btn btn-primary btn-block" data-toggle="modal" data-target="#motivatorModal">Find Motivation Partner</button>
-<!-- Modal -->
-<div class="modal fade" id="motivatorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+
+
+
+
+<!-- MODAL -->
+    <div class="modal fade" id="motivatorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Find a Motivation Partner</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+
+
+            <!-- MATCH RESULTS -->
+            <div id="#resultsDiv">
+            <!--Carousel Wrapper-->
+              <div id="results-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                  <li data-target="#results-carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#results-carousel" data-slide-to="1"></li>
+                  <li data-target="#results-carousel" data-slide-to="2"></li>
+                </ol>
+                <!--/.Indicators-->
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+
+                  <div class="carousel-item active">
+                    <div class="col-md-12 clearfix d-none d-md-block">
+                      <div class="card">
+                        <div class="motivator-img-wrapper">
+                          <img class="img-fluid motivator-img" src="images/Crazy-buff-guy.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                          <h4 class="card-title">Motivator #1</h4>
+                          <p class="card-text">Working with me will get you results! Let's pump some iron!!!</p>
+                          <a class="btn btn-secondary">Pick Me</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <div class="col-md-12 clearfix d-none d-md-block">
+                      <div class="card">
+                        <div class="motivator-img-wrapper">
+                          <img class="img-fluid motivator-img" src="images/femaletrainer.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                          <h4 class="card-title">Motivator #2</h4>
+                          <p class="card-text">Treat your body right! Work out, feels great!</p>
+                          <a class="btn btn-secondary">Pick Me</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <div class="col-md-12 clearfix d-none d-md-block">
+                      <div class="card">
+                        <div class="motivator-img-wrapper">
+                          <img class="img-fluid motivator-img" src="images/personaltrainer3.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                          <h4 class="card-title">Motivator #3</h4>
+                          <p class="card-text">I'm just here for the money...</p>
+                          <a class="btn btn-secondary">Pick Me</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
-                <div class="modal-body">
-                        <div class="carousel-item active">
-
-                                <div class="col-md-12">
-                                    <div class="card">
-                                        <img class="img-fluid" src="images/Crazy-buff-guy.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Motivator #1</h4>
-                                            <p class="card-text">Working with me will get you results! Let's pump some iron!!!</p>
-                                            <a class="btn btn-primary">Pick Me</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="img-fluid" src="images/femaletrainer.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Motivator #2</h4>
-                                            <p class="card-text">Treat your body right! Work out, feels great!</p>
-                                            <a class="btn btn-primary">Pick Me</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="img-fluid" src="images/personaltrainer3.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Motivator #3</h4>
-                                            <p class="card-text">I'm just here for the money...</p>
-                                            <a class="btn btn-primary">Pick Me</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                <!--/.Slides-->
+                <!--Controls-->
+                <a class="carousel-control-prev" href="#results-carousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#results-carousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                <!--/.Controls-->
+              </div>
+              <!--/.Carousel Wrapper-->
             </div>
+            <!-- END MATCH RESULTS -->
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+
         </div>
+      </div>
     </div>
+<!-- END MODAL -->
+
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -369,7 +422,7 @@
                                     </div>
                                   </div>
                                 </div>
-
+        <!-- END CALL MAKING SECTION -->
 
 
 

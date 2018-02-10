@@ -155,3 +155,48 @@ div#login {
     background-color: #B0305B;
     display: none;
 }
+
+.carousel-indicators li {
+    background-color: #AC85EE;
+}
+
+.carousel-indicators {
+    bottom: -5px;
+}
+
+.carousel-indicators .active {
+    background-color: #6E4CA1;
+}
+
+.motivator-img-wrapper .motivator-img {
+    height: 350px;
+    width: auto;
+    border-radius: 5px;
+}
+
+.motivator-img-wrapper {
+    height: 350px;
+    text-align: center;
+}
+
+#resultsDiv div.card-body {
+    text-align: center;
+}
+
+.card.card-cascade .card-body {
+    text-align: center;
+}
+
+.modal-content,
+.modal-content .card {
+    background-color: #F1F1F1;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 2px solid #E1D1D1;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.modal-header {
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
