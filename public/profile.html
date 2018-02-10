@@ -155,7 +155,7 @@
                             <div class="admin-up d-flex justify-content-start">
                                 <i class="fa fa-users py-4" id="user-icon"></i>
                                 <div class="data">
-                                    <h5 class="font-bold dark-grey-text">Edit Profile - <span class="text-muted">Complete your profile</span></h5>
+                                    <h5 class="font-bold dark-grey-text">Edit Profile - <span class="text-muted">Complete your profile</span><span class="badge" aria-live="polite" id="saved">Saved</span></h5>
                                 </div>
                             </div>
                             <!--/.Card Data-->
@@ -168,14 +168,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="md-form form-sm">
-                                            <input type="text" id="form5" class="form-control">
-                                            <label for="form5" class="">First name</label>
+                                            <input type="text" id="firstName" class="form-control profile-field" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                            <label for="firstName" class="">First name</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="md-form form-sm">
-                                            <input type="text" id="form5" class="form-control">
-                                            <label for="form5" class="">Last name</label>
+                                            <input type="text" id="lastName" class="form-control profile-field" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                            <label for="lastName" class="">Last name</label>
                                         </div>
                                     </div>
                                 </div>
@@ -188,15 +188,15 @@
                                 <div class="row">
                                     <div class="col-md-6"">
                                         <div class="md-form form-sm">
-                                            <input type="text" id="form12" class="form-control">
-                                            <label for="form12" class="">Username</label>
+                                            <input type="text" id="uname" class="form-control" disabled autocorrect="off" autocapitalize="off" spellcheck="false">
+                                            <label for="uname" class="disabled">Username</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6"">
                                         <div class="md-form form-sm">
-                                            <input type="text" id="form3" class="form-control">
-                                            <label for="form3" class="">Email address</label>
+                                            <input type="text" id="email" class="form-control profile-field" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                            <label for="email" class="">Email address</label>
                                         </div>
                                     </div>
                                  </div>
@@ -209,19 +209,19 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="checkbox" class="filled-in" id="call-want">
-                                            <label for="call-want">I want reminder calls for my workouts!</label>
+                                            <input type="checkbox" class="filled-in profile-checkbox" id="wantsCalls">
+                                            <label for="wantsCalls">I want reminder calls for my workouts!</label>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div id="call-want-section" class="col-md-11 offset-md-1">
+                                <div id="wantsCalls-section" class="col-md-11 offset-md-1">
                                   <div class="row">
                                     <div class="col-md-6">
                                         <div class="md-form form-sm">
                                             <i class="fa fa-phone prefix"></i>
-                                            <input type="tel" id="user-phone" class="form-control">
-                                            <label for="user-phone">Phone Number:</label>
+                                            <input type="tel" id="phone" class="form-control profile-field">
+                                            <label for="phone">Phone Number:</label>
                                         </div>
                                     </div>
                                   </div>
@@ -306,7 +306,7 @@
                                         </div>
                                     </div>
                                 </div>
-                    
+
                                 <div class="col-md-12 clearfix d-none d-md-block">
                                     <div class="card">
                                         <img class="img-fluid" src="images/femaletrainer.jpg" alt="Card image cap">
@@ -317,7 +317,7 @@
                                         </div>
                                     </div>
                                 </div>
-                    
+
                                 <div class="col-md-12 clearfix d-none d-md-block">
                                     <div class="card">
                                         <img class="img-fluid" src="images/personaltrainer3.jpg" alt="Card image cap">
@@ -328,7 +328,7 @@
                                         </div>
                                     </div>
                                 </div>
-                    
+
                             </div>
                 </div>
                 <div class="modal-footer">
@@ -353,16 +353,16 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="checkbox" class="filled-in" id="call-make"
-                                                aria-describedby="call-make-desc">
-                                            <label for="call-make">I want to help motivate other people!</label>
-                                            <p class="description" id="call-make-desc">Sign up to call someone else at their scheduled workout time.  If you call on time, they might reward you with FitCash!</p>
+                                            <input type="checkbox" class="filled-in profile-checkbox" id="makesCalls"
+                                                aria-describedby="makesCalls-desc">
+                                            <label for="makesCalls">I want to help motivate other people!</label>
+                                            <p class="description" id="makesCalls-desc">Sign up to call someone else at their scheduled workout time.  If you call on time, they might reward you with FitCash!</p>
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <div id="call-make-section" class="col-md-11 offset-md-1">
+                                <div id="makesCalls-section" class="col-md-11 offset-md-1">
                                   <div class="row">
                                     <div class="col-md-7 offset-md-2 text-center">
                                         <p>Thanks!  We'll let you know when you're matched with someone.</p>
@@ -383,8 +383,8 @@
                                     <!-- Grid column -->
                                     <div class="col-md-6">
                                         <div class="md-form form-sm">
-                                            <input type="text" id="form4" class="form-control" disabled>
-                                            <label for="form4" class="disabled">Team</label>
+                                            <input type="text" id="team" class="form-control" disabled>
+                                            <label for="team" class="disabled">Team</label>
                                         </div>
                                     </div>
                                 </div>
@@ -400,8 +400,8 @@
                                         <p class="description">Tell us a little about yourself, your workout goals, and what motivates you.  This text is visible to other users when searching for motivation partners.</p>
                                         <!--Basic textarea-->
                                         <div class="md-form">
-                                            <textarea type="text" id="form10" class="md-textarea"></textarea>
-                                            <label for="form10">I am awesome!</label>
+                                            <textarea type="text" id="aboutMe" class="md-textarea profile-field"></textarea>
+                                            <label for="aboutMe">I am awesome!</label>
                                         </div>
 
                                     </div>

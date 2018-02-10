@@ -139,11 +139,19 @@ button.icon-btn {
     font-style: italic;
 }
 
-#username, #email, #password,
+#username, #register #email, #password,
 #username2, #password2 {
     color: white;
 }
 
 div#login {
+    display: none;
+}
+
+#saved {
+    margin-left: 15px;
+    font-size: small;
+    font-weight: normal;
+    background-color: #B0305B;
     display: none;
 }

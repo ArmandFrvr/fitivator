@@ -31,6 +31,7 @@ module.exports = function(sequelize, DataTypes) {
     firstName: {
       type: DataTypes.STRING,
       default: null,
+      allowNull: true,
       validate: {
         min: 1,
         isAlpha: true  // only allow letters
@@ -39,6 +40,7 @@ module.exports = function(sequelize, DataTypes) {
     lastName: {
       type: DataTypes.STRING,
       default: null,
+      allowNull: true,
       validate: {
         min: 1,
         isAlpha: true
@@ -46,22 +48,23 @@ module.exports = function(sequelize, DataTypes) {
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         isEmail: true
       }
     },
     phone: {
-      type: DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.STRING,
       default: null,
+      allowNull: true,
       validate: {
-        len: [7],
-        isInt: true
+        len: [7]
       }
     },
     aboutMe: {
       type: DataTypes.TEXT,
-      default: null
+      allowNull: true,
+      default: "I am awesome!"
     },
     fitCash: {
       type: DataTypes.DECIMAL(10,2),
@@ -69,7 +72,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     wantsCalls: {
       type: DataTypes.BOOLEAN,
-      allowNull: true,
       default: false
     },
     team: {
@@ -78,7 +80,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     makesCalls: {
       type: DataTypes.BOOLEAN,
-      allowNull: true,
       default: false
     },
     matchQuestions: {

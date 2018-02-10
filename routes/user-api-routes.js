@@ -26,12 +26,12 @@ module.exports = function(app) {
     });
   });
 
-  app.put("api/users", function(req, res) {
+  app.put("/api/users/:uname", function(req, res) {
     db.User.update(
       req.body,
       {
         where: {
-          username: req.body.username
+          username: req.params.uname
         }
       }).then(function(dbUser) {
         res.json(dbUser);

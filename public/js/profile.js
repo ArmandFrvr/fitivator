@@ -3,26 +3,57 @@
 var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 var currentUser = sessionStorage.getItem("username");
-var currentUserID;
 
 // If user isn't logged in, redirect them to the login screen.
 if(!currentUser) {
   window.location.href = "/";
 }
 
+var user;
 
-// Get the user's ID
-// CODE GOES HERE
+$.get("/api/users/" + currentUser, function(data) {
 
+  if(!data) { // User not found, maybe session data is bad or db changed
+    window.location.href = "/";
+  }
+  else {  // we found our user
 
-// Select all of the user's info from the db so we have it to hand
-// CODE GOES HERE
-// currentUser = selectOne * from users where user.externalID = currentUserID
-// currentUser should be a JSON object so we can reference the user fields.
+    // store to var for later use
+    user = data;
 
+    // Once doc is loaded, fill it out with info we just grabbed
+    $(document).ready(function() {
+      $("#firstName").val(user.firstName);
+      fixFieldState("#firstName");
+      $("#lastName").val(user.lastName);
+      fixFieldState("#lastName");
+      $("#uname").val(user.username);
+      fixFieldState("#uname");
+      $("#email").val(user.email);
+      fixFieldState("#email");
+      $("#team").val(user.team);
+      fixFieldState("#team");
+      $("#aboutMe").val(user.aboutMe);
+      fixFieldState("#aboutMe");
+      $("wantsCalls").prop("checked", user.wantsCalls);
+      $("makesCalls").prop("checked", user.makesCalls);
+      $("#phone").val(user.phone);
+      fixFieldState("#phone");
+      $("#wantsCalls").prop("checked", user.wantsCalls);
+
+      // need to loop through user.Workouts array and add a workout section
+      // for each existing entry, populating them with the correct days and times
+
+    });
+  }
+});
 
 
 $(document).ready(function() {
+
+  // Once we have an opacity mask, we need to hide it here.
+  // (mask prevents users from seeing content if they're just going
+  // to get redirected for not being logged in)
 
   // Button to add additional workout days
   $("#add-workout").on("click", function() {
@@ -49,32 +80,6 @@ $(document).ready(function() {
 
     $("#workout-btn-row").before(workoutDiv);
   });
-
-// Checkbox to show/hide workout buddy section
-  $("#call-want").on("change", function() {
-
-    if($(this).prop("checked")) {
-      $("#call-want-section").slideDown(500);
-      $("#call-want-section").show();
-    }
-    else {
-      $("#call-want-section").hide();
-    }
-  });
-
-
-  // Checkbox to sign up to make calls
-  $("#call-make").on("change", function() {
-
-    if($(this).prop("checked")) {
-      $("#call-make-section").slideDown(500);
-      $("#call-make-section").show();
-    }
-    else {
-      $("#call-make-section").hide();
-    }
-  });
-
 
   // Button to find workout partner
   $("#find-partner").on("click", function() {
@@ -158,13 +163,54 @@ $(document).on("click", ".remove-workout", function() {
 });
 
 
+// Profile field changes - update database
+$(document).on("change", ".profile-field", function() {
+  let newInfo = {};
+  newInfo[$(this).attr("id")] = $(this).val();
+  updateUser(newInfo);
+});
 
+// Checkbox state changes.  Since checkbox values update immediately,
+// we can do both the UI stuff and db update in one fxn.
+// (Doesn't work for input fields that don't update until they lose focus)
+$(document).on("change", ".profile-checkbox", function() {
+  let boxId = $(this).attr("id");
 
-// Get the username of the currently logged-in user
-function getUser() {
-  // CODE GOES HERE
+  // Update the database
+  let newInfo = {};
+  newInfo[boxId] = $(this).prop("checked");
+  updateUser(newInfo);
 
+  // Update the UI (expand or collapse the section)
+  if($("#" + boxId).prop("checked")) {
+    $("#" + boxId + "-section").slideDown(500);   // aaaaand, this is where having good
+    $("#" + boxId + "-section").show();           // naming conventions pays off
+  }
+  else {
+    $("#" + boxId + "-section").hide();
+  }
+});
 
-  // return actual username (currently a string)
-  return "12345";
+// Updates the current user with the new information
+function updateUser(newInfo) {
+  $.ajax({ // TIL "$.put" shortcut doesn't exist.  Anyone know why??
+    method: "PUT",
+    url: "/api/users/" + currentUser,
+    data: newInfo
+  })
+  .then(function() {
+    // show "updated" indicator
+    $("#saved").slideDown(500);
+    $("#saved").show();
+    // After 2 seconds, saved indicator disappears
+    setTimeout(function() {
+      $("#saved").fadeOut(500);
+    }, 2000);
+  });
+}
+
+// MDB workaround for prefilled field labels
+function fixFieldState(inputField) {
+    $(inputField).trigger("focusin");
+    $(inputField).trigger("blur");
 }
