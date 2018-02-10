@@ -1,202 +1,228 @@
 /* Your custom styles */
 
 #contact-container {
-    margin-top: 75px;
+  margin-top: 75px;
 }
 #list-group-item{
-    float: left;
+  float: left;
 }
 footer{
-    width: 100%;
+  width: 100%;
 }
 
 .intro-2 {
-    background: url("../images/fitivator_home.jpg")no-repeat center center;
-    background-size: cover;
+  background: url("../images/fitivator_home.jpg")no-repeat center center;
+  background-size: cover;
 }
 
 /* .top-nav-collapse {
-    background-color: #3f51b5 !important;
+  background-color: #3f51b5 !important;
 } */
 
 /* .navbar:not(.top-nav-collapse) {
-    background: transparent !important;
+  background: transparent !important;
 } */
 
 /* @media (max-width: 768px) {
-    .navbar:not(.top-nav-collapse) {
-        background: #3f51b5 !important;
-    }
+  .navbar:not(.top-nav-collapse) {
+    background: #3f51b5 !important;
+  }
 } */
 
 .hm-gradient .full-bg-img {
-    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
-    background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%)));
-    background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+  background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%)));
+  background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
 }
 
 .dark .card {
-    background-color: rgba(126, 123, 215, 0.2);
+  background-color: rgba(126, 123, 215, 0.2);
 }
 
 /*Removed global prefix styling... should be using form-sm on the surrounding div if you want smaller font & icons.*/
 /*.md-form .prefix {
-    font-size: 1.5rem;
-    margin-top: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }*/
 
 .dark .md-form label {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 h6 {
-    line-height: 1.7;
+  line-height: 1.7;
 }
 
 @media (max-width: 740px) {
-    .full-height,
-    .full-height body,
-    .full-height header,
-    .full-height header .view {
-        height: 1040px;
-    }
+  .full-height,
+  .full-height body,
+  .full-height header,
+  .full-height header .view {
+    height: 1040px;
+  }
 }
 
 /*input[type=date]
 */
 
 select {
-    display: inline !important; /* MDB disables select because they want you to pay for their version... */
+  display: inline !important; /* MDB disables select because they want you to pay for their version... */
 }
 
 #custom .md-form.form-sm select {
-    padding-bottom: .2rem;
-    padding-top: .2rem;
-    /*font-size: .8rem;*/
-    line-height: .5;
-    margin-top: 10px;
+  padding-bottom: .2rem;
+  padding-top: .2rem;
+  /*font-size: .8rem;*/
+  line-height: .5;
+  margin-top: 10px;
 }
 
 .md-form.form-sm .prefix~select {
-    margin-left: 2.2rem;
+  margin-left: 2.2rem;
 }
 
 .md-form .prefix~select {
-    width: calc(100% - 3rem);
+  width: calc(100% - 3rem);
 }
 
 #custom input[type="time"] {
-    line-height: 1;
-    padding-left: 10px;
+  line-height: 1;
+  padding-left: 10px;
 }
 
 .workout-row .md-form {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button.icon-btn {
-    border: none;
-    background-color: transparent;
-    font-size: 1.6em;
-    padding-top: 6px;
+  border: none;
+  background-color: transparent;
+  font-size: 1.6em;
+  padding-top: 6px;
 }
 
 .remove-workout {
-    color: #C00000;
+  color: #C00000;
 }
 
 #call-want-section,
 #call-make-section {
-    display: none;
+  display: none;
 }
 
 #user-icon {
-    padding: 10px;
-    margin-top: -20px;
+  padding: 10px;
+  margin-top: -20px;
 }
 
 /* Sidebar colors */
 /* #sidenav-bg:after, .sidenav-bg:after {
-    background-color: rgba(66, 54, 99, .8   );
+  background-color: rgba(66, 54, 99, .8   );
 }
 
 #slide-out,
 #slide-out li,
 #slide-out a,
 #slide-out i, {
-    color: white !important;        /* this isn't working for some reason */
+  color: white !important;        /* this isn't working for some reason */
 /* } */
 
 #sidebar-logo {
-    width: 90%;
+  width: 90%;
 }
 
 .description {
-    font-style: italic;
+  font-style: italic;
 }
 
 #username, #register #email, #password,
 #username2, #password2 {
-    color: white;
+  color: white;
 }
 
 div#login {
-    display: none;
+  display: none;
 }
 
 #saved {
-    margin-left: 15px;
-    font-size: small;
-    font-weight: normal;
-    background-color: #B0305B;
-    display: none;
+  margin-left: 15px;
+  font-size: small;
+  font-weight: normal;
+  background-color: #B0305B;
+  display: none;
 }
 
+/* MATCH RESULTS STYLES */
 .carousel-indicators li {
-    background-color: #AC85EE;
+  background-color: #AC85EE;
 }
 
 .carousel-indicators {
-    bottom: -5px;
+  bottom: -5px;
 }
 
 .carousel-indicators .active {
-    background-color: #6E4CA1;
+  background-color: #6E4CA1;
 }
 
 .motivator-img-wrapper .motivator-img {
-    height: 350px;
-    width: auto;
-    border-radius: 5px;
+  height: 350px;
+  width: auto;
+  border-radius: 5px;
 }
 
 .motivator-img-wrapper {
-    height: 350px;
-    text-align: center;
+  height: 350px;
+  text-align: center;
 }
 
 #resultsDiv div.card-body {
-    text-align: center;
+  text-align: center;
 }
 
 .card.card-cascade .card-body {
-    text-align: center;
+  text-align: center;
 }
 
 .modal-content,
 .modal-content .card {
-    background-color: #F1F1F1;
-    border-top: 1px solid #E1E1E1;
-    border-bottom: 2px solid #E1D1D1;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+  background-color: #F1F1F1;
+  border-top: 1px solid #E1E1E1;
+  border-bottom: 2px solid #E1D1D1;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .modal-header {
-    padding-top: 5px;
-    padding-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+
+#resultsDiv {
+  display: none !important; /* Second screen-- hide for now */
+}
+
+/* MATCH QUESTION STYLES */
+
+#matchQsDiv { /* First screen */
+
+}
+
+legend {
+  margin-bottom: 0px;
+  font-size: 1rem;
+}
+
+.quizQ {
+  margin-bottom: 0px !important;
+  margin-top: 10px;
+}
+
+#viewMatches {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }

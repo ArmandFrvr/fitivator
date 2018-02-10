@@ -265,9 +265,6 @@
                                             </button>
                                         </div>
                                     </div>
-
-
-
                                   </div>
 
                                   <div class="row" id="workout-btn-row">
@@ -299,10 +296,56 @@
           </div>
           <div class="modal-body">
 
+            <!-- MATCH QUESTIONS -->
+            <div id="#matchQsDiv">
+              <div class="col-md-12 clearfix d-md-block">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Tell us about yourself</h4>
+                    <div class="md-form">
 
+                      <p id="q1label" class="quizQ pull-left">How do you like to work out?</p>
+                      <select class="form-control" id="q1" aria-labelledby="q1label">
+                        <option value="1">Yoga or Pilates</option>
+                        <option value="2">Cardio</option>
+                        <option value="3">I'll try anything</option>
+                        <option value="4">Sports</option>
+                        <option value="5">Weight Lifting</option>
+                      </select>
+
+                      <form class="form-inline">
+                        <fieldset>
+                          <legend>Would you rather work out alone or with a group?</legend>
+                          <div class="form-group">
+                            <input name="group1" type="radio" id="radio1" checked="checked" class="with-gap" value="1">
+                            <label for="radio1">Alone</label>
+                          </div>
+                          <div class="form-group">
+                            <input name="group1" type="radio" id="radio2" class="with-gap" value="2">
+                            <label for="radio2">With a group</label>
+                          </div>
+                        </fieldset>
+                      </form>
+                      <br>
+                      <p id="q3label" class="quizQ pull-left">What are your fitness goals?</p>
+                      <select class="form-control" id="q3" aria-labelledby="q3label">
+                        <option value="1">Tone up</option>
+                        <option value="2">Lose fat</option>
+                        <option value="3">Live a healthy lifestyle</option>
+                        <option value="4">Improve performance</option>
+                        <option value="5">Get swole</option>
+                      </select>
+
+                      <a class="btn btn-secondary" id="viewMatches">View Matches</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END MATCH QUESTIONS -->
 
             <!-- MATCH RESULTS -->
-            <div id="#resultsDiv">
+            <div id="resultsDiv">
             <!--Carousel Wrapper-->
               <div id="results-carousel" class="carousel slide carousel-fade" data-ride="carousel">
                 <!--Indicators-->
@@ -324,7 +367,7 @@
                         <div class="card-body">
                           <h4 class="card-title">Motivator #1</h4>
                           <p class="card-text">Working with me will get you results! Let's pump some iron!!!</p>
-                          <a class="btn btn-secondary">Pick Me</a>
+                          <a class="btn btn-secondary" id="pick1btn">Pick Me</a>
                         </div>
                       </div>
                     </div>
@@ -339,7 +382,7 @@
                         <div class="card-body">
                           <h4 class="card-title">Motivator #2</h4>
                           <p class="card-text">Treat your body right! Work out, feels great!</p>
-                          <a class="btn btn-secondary">Pick Me</a>
+                          <a class="btn btn-secondary" id="pick2btn">Pick Me</a>
                         </div>
                       </div>
                     </div>
@@ -354,7 +397,7 @@
                         <div class="card-body">
                           <h4 class="card-title">Motivator #3</h4>
                           <p class="card-text">I'm just here for the money...</p>
-                          <a class="btn btn-secondary">Pick Me</a>
+                          <a class="btn btn-secondary" id="pick3btn">Pick Me</a>
                         </div>
                       </div>
                     </div>
@@ -380,8 +423,8 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+            <button type="button" class="btn btn-primary" id="back">Back</button>
           </div>
 
         </div>
@@ -391,17 +434,13 @@
 
 
 
-                                            </div>
-                                        </div>
-                                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-
-
-                                </div>
-
-
-        <!-- CALL MAKING SECTION -->
+<!-- CALL MAKING SECTION -->
                                 <!-- Grid row -->
                                 <div class="row">
                                     <div class="col-md-12">
@@ -422,10 +461,7 @@
                                     </div>
                                   </div>
                                 </div>
-        <!-- END CALL MAKING SECTION -->
-
-
-
+<!-- END CALL MAKING SECTION -->
 
 
 
@@ -459,77 +495,12 @@
 
                                     </div>
                                     <!-- Grid column -->
-
-
-                                    <!-- Possible questions for future dev -->
-
-<!--                                     <div class="col-md-12 about-text">
-                                        <h4 class="text-muted text-left my-4"><strong>What motivates you to get up in the morning?</strong></h4>
-                                        <div class="md-form">
-                                            <textarea type="text" id="motivate-input" class="md-textarea"></textarea>
-                                            <label for="form10">Coffee? Bacon?</label>
-                                        </div>
-                                    </div> -->
-
-<!--                                     <div class="col-md-12 about-text">
-                                        <h4 class="text-muted text-left my-4"><strong>What are your goals for getting into shape?</strong></h4>
-                                        <div class="md-form">
-                                            <textarea type="text" id="form10" class="md-textarea"></textarea>
-                                            <label for="form10">Healthy Lifestyle? Lose Body Fat? Tone up?</label>
-                                        </div>
-                                    </div> -->
-
-<!--                                     <div class="col-md-12 about-text">
-                                        <h4 class="text-muted text-left my-4"><strong>Do you like working out alone or with other people?</strong></h4>
-                                        <form class="form-inline">
-                                            <div class="form-group">
-                                                <input type="checkbox" class="filled-in" id="alone-input">
-                                                <label for="alone">Alone</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="checkbox" class="filled-in" id="ingroup-input">
-                                                <label for="groups">In groups</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="checkbox" class="filled-in" id="no-preference-input">
-                                                <label for="nopreference">No preference</label>
-                                            </div>
-                                        </form>
-                                    </div> -->
-
-<!--                                     <div class="col-md-12 about-text">
-                                        <h4 class="text-muted text-left my-4"><strong>What is your favorite type of workout?</strong></h4>
-                                        <form class="form-inline">
-                                            <div class="form-group">
-                                                <input type="checkbox" class="filled-in" id="yoga-input">
-                                                <label for="yoga">Yoga</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="checkbox" class="filled-in" id="cardio-input">
-                                                <label for="cardio">Cardio</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="checkbox" class="filled-in" id="weight-input">
-                                                <label for="weights">Weight Lifting</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="checkbox" class="filled-in" id="all-input">
-                                                <label for="alloftheabove">All of the above</label>
-                                            </div>
-                                        </form>
-                                    </div> -->
-
-
-
                                 </div>
                                 <!-- Grid row -->
-
                             </div>
                             <!--/.Card content-->
-
                         </div>
                         <!--/.Card-->
-
                     </div>
                     <!-- Grid column -->
 
@@ -562,13 +533,10 @@
                         <!--Card-->
                     </div>
                     <!-- Grid column -->
-
                 </div>
                 <!--Grid row-->
-
             </section>
             <!--Section: Team v.1-->
-
         </div>
     </main>
     <!--Main layout-->
